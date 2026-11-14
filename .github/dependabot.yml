@@ -44,3 +44,4 @@ updates:
           - 'patch'
     ignore:
       - dependency-name: django-filingcabinet
+  
