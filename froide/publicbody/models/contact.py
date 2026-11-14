@@ -47,8 +47,8 @@ class PublicBodyContact(models.Model):
     fax = models.CharField(_("Fax"), max_length=50, blank=True, default="")
 
     class Meta:
-        verbose_name = _("Public Body Contact")
-        verbose_name_plural = _("Public Body Contacts")
+        verbose_name = _("Public Agency Contact")
+        verbose_name_plural = _("Public Agency Contacts")
         constraints = [
             models.UniqueConstraint(
                 fields=["publicbody", "category"],
@@ -79,5 +79,5 @@ class ProposedPublicBodyContact(PublicBodyContact):
 
     class Meta:
         proxy = True
-        verbose_name = _("Proposed Public Body Contact")
-        verbose_name_plural = _("Proposed Public Body Contacts")
+        verbose_name = _("Proposed Public Agency Contact")
+        verbose_name_plural = _("Proposed Public Agency Contacts")

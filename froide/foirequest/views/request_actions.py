@@ -11,7 +11,7 @@ from django.utils.translation import gettext as _
 from django.views.decorators.http import require_POST
 from django.views.generic import UpdateView
 
-from froide.account.forms import AddressForm, NewUserForm
+from froide.account.forms import NewUserForm
 from froide.foirequest.forms.project import AssignProjectForm
 from froide.foirequest.forms.request import RedactDescriptionForm
 from froide.helper.auth import can_manage_object
@@ -85,18 +85,18 @@ def suggest_public_body(request, slug):
             messages.add_message(
                 request,
                 messages.SUCCESS,
-                _("Your Public Body suggestion has been added."),
+                _("Your Public Agency suggestion has been added."),
             )
         else:
             messages.add_message(
                 request,
                 messages.WARNING,
-                _("This Public Body has already been suggested."),
+                _("This Public Agency has already been suggested."),
             )
         return redirect(foirequest)
 
     messages.add_message(
-        request, messages.ERROR, _("You need to specify a Public Body!")
+        request, messages.ERROR, _("You need to specify a Public Agency!")
     )
     return render_400(request)
 
@@ -237,9 +237,6 @@ def make_same_request(request, slug):
                 request, messages.ERROR, _("You already made an identical request")
             )
             return render_400(request)
-        address_form = AddressForm(request.POST, request=request)
-        if address_form.is_valid():
-            address_form.save(user)
 
     throttle_message = check_throttle(request.user, FoiRequest)
     if throttle_message:

@@ -1,4 +1,4 @@
 {% load i18n %}{% autoescape off %}--
-{% blocktrans %}Support Froide by donating to Open Knowledge Foundation Germany:
-https://okfn.de/spenden/
+{% blocktrans %}Email sent from uipa.org
 {% endblocktrans %}{% endautoescape %}
+

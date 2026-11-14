@@ -273,7 +273,7 @@ class BaseFoiRequestFilterSet(BaseSearchFilterSet):
             }
         ),
         help_text=_(
-            "When the same request is sent to many public bodies at once, only the first is shown."
+            "When the same request is sent to many public agencies at once, only the first is shown."
         ),
     )
 

@@ -25,8 +25,8 @@ class Migration(migrations.Migration):
                 ('user', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to=settings.AUTH_USER_MODEL)),
             ],
             options={
-                'verbose_name': 'Public Body Contact',
-                'verbose_name_plural': 'Public Body Contacts',
+                'verbose_name': 'Public Agency Contact',
+                'verbose_name_plural': 'Public Agency Contacts',
                 'constraints': [models.UniqueConstraint(condition=models.Q(('confirmed', True)), fields=('publicbody', 'category'), name='unique_publicbody_category'), models.UniqueConstraint(condition=models.Q(('confirmed', False)), fields=('publicbody', 'category', 'user'), name='unique_publicbody_category_draft')],
             },
         ),

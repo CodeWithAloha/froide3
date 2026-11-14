@@ -195,7 +195,6 @@ def make_world() -> Site:
         email="info@fragdenstaat.de",
         first_name="Stefan",
         last_name="Wehrmeyer",
-        address="DummyStreet23\n12345 Town",
     )
     UserFactory.create(
         is_staff=True,
@@ -204,7 +203,6 @@ def make_world() -> Site:
         email="superuser@fragdenstaat.de",
         first_name="Stefan",
         last_name="Wehrmeyer",
-        address="DummyStreet23\n12345 Town",
     )
     UserFactory.create(
         username="dummy", email="dummy@example.org", first_name="Dummy", last_name="D."

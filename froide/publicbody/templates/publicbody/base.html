@@ -4,7 +4,7 @@
     active
 {% endblock nav_publicbodies %}
 {% block title %}
-    {% trans "Public Bodies" %} - {{ SITE_NAME }}
+    {% trans "Public Agencies" %} - {{ SITE_NAME }}
 {% endblock title %}
 {% block body %}
     <div class="bg-body-tertiary">
@@ -19,7 +19,7 @@
                 </li>
                 <li class="breadcrumb-item">
                     {# djlint:off D018 #}
-                    <a href="{% url 'publicbody-list' %}">{% trans "Public Bodies" %}</a>
+                    <a href="{% url 'publicbody-list' %}">{% trans "Public Agencies" %}</a>
                 </li>
                 {% if object %}
                     <li class="breadcrumb-item">

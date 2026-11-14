@@ -147,7 +147,7 @@ class CSVImporter(object):
                 )
             elif regions is not None:
                 pb = PublicBody._default_manager.get(
-                    slug=row["slug"], regions__in=regions
+                    slug=row["slug"], regions__in=regions, jurisdiction=row['jurisdiction']
                 )
             else:
                 raise NotUniquelyIdentifiable

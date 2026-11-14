@@ -86,7 +86,6 @@ class SendMessageProjectForm(SendMessageForm):
         self.foirequests = kwargs.pop("foirequests")
 
     def _initialize_fields(self):
-        self.fields["address"].initial = self.foiproject.user.address
         self.fields["message"].initial = get_default_initial_message(
             self.foiproject.user
         )
@@ -126,7 +125,7 @@ class SetStatusProjectForm(FoiRequestStatusForm):
                 widget=BootstrapSelect,
                 help_text=_(
                     "When you are (partially) denied access to information, "
-                    "the Public Body should always state the reason."
+                    "the Public Agency should always state the reason."
                 ),
             )
 

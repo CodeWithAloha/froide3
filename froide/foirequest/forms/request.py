@@ -85,7 +85,7 @@ class RequestForm(JSONMixin, forms.Form):
 
     reference = forms.CharField(widget=forms.HiddenInput, required=False)
     law_type = forms.CharField(widget=forms.HiddenInput, required=False)
-    # Helps select the right contact at the public body
+    # Helps select the right contact at the public agency
     responsibility = forms.ModelChoiceField(
         queryset=Category.objects.all(),
         widget=forms.HiddenInput,
@@ -172,12 +172,12 @@ class RequestForm(JSONMixin, forms.Form):
 
 class MakePublicBodySuggestionForm(forms.Form):
     publicbody = forms.ModelChoiceField(
-        label=_("Public body"),
+        label=_("Public agency"),
         queryset=None,
         widget=PublicBodySelect,
     )
     reason = forms.CharField(
-        label=_("Please specify a reason why this is the right Public Body:"),
+        label=_("Please specify a reason why this is the right Public Agency:"),
         widget=forms.TextInput(attrs={"size": "40", "placeholder": _("Reason")}),
         required=False,
     )
@@ -236,10 +236,10 @@ class PublicBodySuggestionsForm(forms.Form):
 
     def clean(self):
         if self.foirequest.public_body is not None:
-            raise forms.ValidationError(_("This request doesn't need a Public Body!"))
+            raise forms.ValidationError(_("This request doesn't need a Public Agency!"))
 
         if not self.foirequest.needs_public_body():
-            raise forms.ValidationError(_("This request doesn't need a Public Body!"))
+            raise forms.ValidationError(_("This request doesn't need a Public Agency!"))
         return self.cleaned_data
 
     def save(self, user=None):
@@ -292,13 +292,11 @@ class FoiRequestStatusForm(forms.Form, JSONMixin):
         ],
     )
 
-    resolution = forms.ChoiceField(
+    resolution = forms.CharField(
         label=_("Resolution"),
-        choices=[("", _("No outcome yet"))] + FoiRequest.RESOLUTION.choices,
         required=False,
-        widget=BootstrapSelect,
-        help_text=_("How would you describe the current outcome of this request?"),
-    )
+        widget=forms.Textarea(attrs={"class": "form-control",
+                                     "placeholder": _("Resolution")}))
     if payment_possible:
         costs = forms.DecimalField(
             label=_("Costs"),
@@ -310,7 +308,7 @@ class FoiRequestStatusForm(forms.Form, JSONMixin):
             localize=True,
             widget=PriceInput,
             help_text=_(
-                "Please specify what the Public Body charges for the information."
+                "Please specify what the Public Agency charges for the information."
             ),
         )
 
@@ -321,14 +319,13 @@ class FoiRequestStatusForm(forms.Form, JSONMixin):
         refusal_choices = []
         if foirequest.law:
             refusal_choices = foirequest.law.get_refusal_reason_choices()
-        self.fields["refusal_reason"] = forms.ChoiceField(
+        self.fields["refusal_reason"] = forms.CharField(
             label=_("Refusal Reason"),
-            choices=[("", _("No or other reason given"))] + refusal_choices,
             required=False,
-            widget=BootstrapSelect,
+            widget=forms.Textarea(attrs={"class": "form-control"}),
             help_text=_(
                 "When you are (partially) denied access to information, "
-                "the Public Body should always state the reason."
+                "the Public Agency should always state the reason."
             ),
         )
 
@@ -366,7 +363,8 @@ class FoiRequestStatusForm(forms.Form, JSONMixin):
         foirequest.status = status
         foirequest.resolution = resolution
 
-        foirequest.costs = data["costs"]
+        if 'costs' in data:
+            foirequest.costs = data["costs"]
         if resolution == "refused" or resolution == "partially_successful":
             foirequest.refusal_reason = data["refusal_reason"]
         else:

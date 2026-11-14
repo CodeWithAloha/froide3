@@ -13,7 +13,6 @@ from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 from django.utils.translation import ngettext_lazy
 
-from froide.account.forms import AddressBaseForm
 from froide.account.services import AccountService
 from froide.foirequest.models.event import FoiEvent
 from froide.helper.fields import MultipleFileField
@@ -121,7 +120,7 @@ def get_send_message_form(*args, **kwargs):
     foirequest = kwargs.pop("foirequest")
     last_message = list(foirequest.messages)[-1]
     # Translators: message reply prefix
-    prefix = _("Re:")
+    prefix = _("")
     subject = last_message.subject
     if not subject.startswith(str(prefix)):
         subject = "{prefix} {subject}".format(
@@ -175,7 +174,7 @@ def get_message_sender_form(*args, **kwargs):
 
 class MessagePublicBodySenderForm(forms.Form):
     sender = forms.ModelChoiceField(
-        label=_("Sending Public Body"),
+        label=_("Sending Public Agency"),
         queryset=PublicBody.objects.all(),
         widget=PublicBodySelect,
     )
@@ -203,7 +202,7 @@ def get_message_recipient_form(*args, **kwargs):
 
 class MessagePublicBodyRecipientForm(forms.Form):
     recipient = forms.ModelChoiceField(
-        label=_("Recipient Public Body"),
+        label=_("Recipient Public Agency"),
         queryset=PublicBody.objects.all(),
         widget=PublicBodySelect,
     )
@@ -226,7 +225,7 @@ class MessagePublicBodyRecipientForm(forms.Form):
         self.message.save()
 
 
-class SendMessageForm(AttachmentSaverMixin, AddressBaseForm, forms.Form):
+class SendMessageForm(AttachmentSaverMixin, forms.Form):
     to = forms.ChoiceField(
         label=_("To"), choices=[], required=True, widget=BootstrapRadioSelect
     )
@@ -254,7 +253,8 @@ class SendMessageForm(AttachmentSaverMixin, AddressBaseForm, forms.Form):
     )
 
     files_help_text = _(
-        "Uploaded scans can be PDF, JPG, PNG or GIF. They will be non-public "
+        "Uploaded scans can be PDF, JPG, PNG or GIF and no greater than "
+        f"{settings.DATA_UPLOAD_MAX_MEMORY_SIZE/(1024 * 1024)} MB.. They will be non-public "
         "by default and can be redacted after upload."
     )
     files = MultipleFileField(
@@ -269,7 +269,7 @@ class SendMessageForm(AttachmentSaverMixin, AddressBaseForm, forms.Form):
         label=_("Send physical address"),
         widget=BootstrapCheckboxInput,
         help_text=_(
-            "If the public body is asking for your post "
+            "If the public agency is asking for your post "
             "address, check this and we will append the "
             "address below."
         ),
@@ -297,7 +297,6 @@ class SendMessageForm(AttachmentSaverMixin, AddressBaseForm, forms.Form):
         address_optional = self.foirequest.law and self.foirequest.law.email_only
 
         self.fields["send_address"].initial = not address_optional
-        self.fields["address"].initial = self.foirequest.user.address
 
     def get_user(self):
         return self.foirequest.user
@@ -618,9 +617,10 @@ class EditMessageForm(MessageEditMixin):
 
 
 class PostalBaseForm(MessageEditMixin, AttachmentSaverMixin, forms.Form):
-    scan_help_text = _("Uploaded scans can be PDF, JPG, PNG or GIF.")
+    scan_help_text = _("Uploaded scans can be PDF, JPG, PNG or GIF and no greater than "
+                       f"{settings.DATA_UPLOAD_MAX_MEMORY_SIZE/(1024 * 1024)} MB..")
     publicbody = forms.ModelChoiceField(
-        label=_("Public body"),
+        label=_("Public agency"),
         queryset=PublicBody.objects.all(),
         widget=PublicBodySelect,
     )
@@ -689,7 +689,7 @@ class PostalReplyForm(PostalBaseForm):
         "files",
         "not_publishable",
     ]
-    PUBLICBODY_LABEL = _("Sender public body")
+    PUBLICBODY_LABEL = _("Sender public agency")
 
     sender = forms.CharField(
         label=_("Sender name"),
@@ -737,7 +737,7 @@ def get_postal_message_form(*args, **kwargs):
 
 class PostalMessageForm(PostalBaseForm):
     FIELD_ORDER = ["publicbody", "recipient", "date", "subject", "text", "files"]
-    PUBLICBODY_LABEL = _("Receiving public body")
+    PUBLICBODY_LABEL = _("Receiving public agency")
 
     recipient = forms.CharField(
         label=_("Recipient Name"),

@@ -311,8 +311,8 @@ export type FoiMessageKindEnum =
 
 /**
  * * `awaiting_user_confirmation` - Awaiting user confirmation
- * * `publicbody_needed` - Public Body needed
- * * `awaiting_publicbody_confirmation` - Awaiting Public Body confirmation
+ * * `publicbody_needed` - Public Agency needed
+ * * `awaiting_publicbody_confirmation` - Awaiting Public Agency confirmation
  * * `awaiting_response` - Awaiting response
  * * `awaiting_classification` - Request awaits classification
  * * `asleep` - Request asleep
@@ -330,8 +330,8 @@ export const FoiMessageStatusEnum = {
 
 /**
  * * `awaiting_user_confirmation` - Awaiting user confirmation
- * * `publicbody_needed` - Public Body needed
- * * `awaiting_publicbody_confirmation` - Awaiting Public Body confirmation
+ * * `publicbody_needed` - Public Agency needed
+ * * `awaiting_publicbody_confirmation` - Awaiting Public Agency confirmation
  * * `awaiting_response` - Awaiting response
  * * `awaiting_classification` - Request awaits classification
  * * `asleep` - Request asleep
@@ -906,7 +906,7 @@ export type ProblemReport = {
  * * `not_nice` - Content is against netiquette.
  * * `info_outdated` - Published information is outdated.
  * * `info_wrong` - Published information is wrong.
- * * `bounce_publicbody` - You received a bounce mail from the public body.
+ * * `bounce_publicbody` - You received a bounce mail from the public agency.
  * * `mail_inauthentic` - Received mail does not pass authenticity checks.
  */
 export const ProblemReportKindEnum = {
@@ -933,7 +933,7 @@ export const ProblemReportKindEnum = {
  * * `not_nice` - Content is against netiquette.
  * * `info_outdated` - Published information is outdated.
  * * `info_wrong` - Published information is wrong.
- * * `bounce_publicbody` - You received a bounce mail from the public body.
+ * * `bounce_publicbody` - You received a bounce mail from the public agency.
  * * `mail_inauthentic` - Received mail does not pass authenticity checks.
  */
 export type ProblemReportKindEnum =
@@ -2967,7 +2967,7 @@ export type PublicbodyRetrieveData = {
   body?: never
   path: {
     /**
-     * A unique integer value identifying this Public Body.
+     * A unique integer value identifying this Public Agency.
      */
     id: number
   }
@@ -3197,8 +3197,8 @@ export type RequestListData = {
     slug?: string
     /**
      * * `awaiting_user_confirmation` - Awaiting user confirmation
-     * * `publicbody_needed` - Public Body needed
-     * * `awaiting_publicbody_confirmation` - Awaiting Public Body confirmation
+     * * `publicbody_needed` - Public Agency needed
+     * * `awaiting_publicbody_confirmation` - Awaiting Public Agency confirmation
      * * `awaiting_response` - Awaiting response
      * * `awaiting_classification` - Request awaits classification
      * * `asleep` - Request asleep

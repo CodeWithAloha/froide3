@@ -15,7 +15,7 @@ from django.utils.translation import pgettext
 from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import DetailView, FormView, TemplateView
 
-from froide.account.forms import AddressForm, NewUserForm
+from froide.account.forms import NewUserForm
 from froide.account.preferences import get_preferences_for_user
 from froide.campaign.models import Campaign
 from froide.foirequest.forms.preferences import make_request_intro_skip_howto_pref
@@ -84,7 +84,7 @@ class MakeRequestView(FormView):
         "hide_similar",  # hide similar request search
         "hide_public",  # hide option to make request non-public
         "hide_draft",  # hide button to save request as draft
-        "hide_publicbody",  # hide option to change public body. use on public-body specific request url
+        "hide_publicbody",  # hide option to change public agency. use on public-body specific request url
         "hide_full_text",  # hide option to edit the request boilerplate text
         "hide_editing",  # hide step to write request text. use together with body param
     )
@@ -192,16 +192,16 @@ class MakeRequestView(FormView):
             },
             "i18n": {
                 "publicBodiesFound": [
-                    _("one public body found"),
-                    _("{count} public bodies found").format(count="${count}"),
+                    _("one public agency found"),
+                    _("{count} public agencies found").format(count="${count}"),
                 ],
                 "publicBodiesChosen": [
-                    _("one public body chosen"),
-                    _("{count} public bodies chosen").format(count="${count}"),
+                    _("one public agency chosen"),
+                    _("{count} public agencies chosen").format(count="${count}"),
                 ],
                 "publicBodiesCount": [
-                    _("one public body"),
-                    _("{count} public bodies").format(count="${count}"),
+                    _("one public agency"),
+                    _("{count} public agencies").format(count="${count}"),
                 ],
                 "requestCount": [
                     pgettext("js", "one request"),
@@ -231,9 +231,9 @@ class MakeRequestView(FormView):
                 ),
                 "makeRequestYourself": _("Make a request yourself"),
                 "writeRequest": _("Write the request"),
-                "recipientPb": _("Receiving public body"),
+                "recipientPb": _("Receiving public agency"),
                 "introText": _(
-                    "Access information by filing a request to a public body. We'll guide you through the process."
+                    "Access information by filing a request to a public agency. We'll guide you through the process."
                 ),
                 "letsGo": _("Let's go!"),
                 "orCampaign": _(
@@ -248,14 +248,14 @@ class MakeRequestView(FormView):
                     "This form remembers your inputs, as long as stay in the same tab."
                 ),
                 "writingRequestTo": _("You are writing a request to"),
-                "toMultiPublicBodies": _("To: {count} public bodies").format(
+                "toMultiPublicBodies": _("To: {count} public agencies").format(
                     count="${count}"
                 ),
-                "selectPublicBodies": _("Select public bodies"),
+                "selectPublicBodies": _("Select public agencies"),
                 "continue": _("continue"),
                 "continueWithSelected": _("Continue with selected"),
                 "selectAll": [_("select one"), _("select all")],
-                "selectingAll": _("Selecting all public bodies, please wait..."),
+                "selectingAll": _("Selecting all public agencies, please wait..."),
                 "name": _("Name"),
                 "filterPlaceholder": _("Filter…"),
                 "level": pgettext("Publicbody filter", "Level"),
@@ -290,13 +290,13 @@ class MakeRequestView(FormView):
                 "loading": _("Loading..."),
                 "next": _("next"),
                 "previous": _("previous"),
-                "choosePublicBody": _("Choose public body"),
+                "choosePublicBody": _("Choose public agency"),
                 "checkSelection": _("Check selection"),
                 "checkRequest": _("Check request"),
                 "goNextStep": _("Go to next step"),
                 "batchRequestDraftOnly": _(
                     "You have been allowed to make one project request to "
-                    "these public bodies, but you do not have permission "
+                    "these public agencies, but you do not have permission "
                     "to select your own."
                 ),
                 "subject": _("Subject"),
@@ -320,7 +320,7 @@ class MakeRequestView(FormView):
                 "reviewEdit": _("Edit"),
                 "reviewFrom": _("From"),
                 "reviewTo": _("To"),
-                "reviewPublicbodies": _("public bodies"),
+                "reviewPublicbodies": _("public agencies"),
                 "greeting": _("Dear Sir or Madam"),
                 "kindRegards": _("Kind regards"),
                 "yourFirstName": _("Your first name"),
@@ -382,7 +382,7 @@ class MakeRequestView(FormView):
                     "You need to create an account at {site_name} so you will be able to manage your request."
                 ).format(site_name=settings.SITE_NAME),
                 "skipIntroHowto": _(
-                    "Skip this part next time and start at “Choose public body” (optional)"
+                    "Skip this part next time and start at “Choose public agency” (optional)"
                 ),
                 "error": _("Error"),
                 "none": _("None chosen"),
@@ -397,7 +397,7 @@ class MakeRequestView(FormView):
                     "The body contains an illegal placeholder ({placeholder})."
                 ).format(placeholder="${placeholder}"),
                 "pagination": _("Pagination"),
-                "publicbody": _("Public body"),
+                "publicbody": _("Public agency"),
                 "requestBody": _("Request body"),
                 "request": _("request"),
                 "visibility": _("Visibility"),
@@ -413,16 +413,16 @@ class MakeRequestView(FormView):
                     "My name may appear on the website in <strong>plain text</strong>"
                 ),
                 "email": _("Email"),
-                "notSentToPb": _("(not sent to public body)"),
+                "notSentToPb": _("(not sent to public agency)"),
                 "terms": _("Terms of Use"),
                 "searchToPbName": _("to %(name)s") % {"name": "${name}"},
-                "searchToProject": _("to %(name)s and %(count)s other public bodies")
+                "searchToProject": _("to %(name)s and %(count)s other public agencies")
                 % {
                     "name": "${name}",
                     "count": "${count}",
                 },
                 "notYetSet": _("Not yet set"),
-                "searchSelectThisPb": _("Select this public body"),
+                "searchSelectThisPb": _("Select this public agency"),
                 "dateRange": _("Date range"),
                 "dateRangeFrom": _("From"),
                 "dateRangeTo": _("Until"),
@@ -486,13 +486,7 @@ class MakeRequestView(FormView):
         return initial_user_data
 
     def get_user_form(self):
-        if self.request.user.is_authenticated:
-            form_klass = AddressForm
-            kwargs = {
-                "initial": {"address": self.request.user.address},
-                "request": self.request,
-            }
-        else:
+        if not self.request.user.is_authenticated:
             form_klass = NewUserForm
             kwargs = {"initial": self.get_user_initial(), "request": self.request}
         if self.request.method in ("POST", "PUT"):
@@ -516,9 +510,9 @@ class MakeRequestView(FormView):
 
     def get_publicbodies(self):
         if self.request.method == "POST":
-            # on POST public bodies need to come from POST vars
+            # on POST public agencies need to come from POST vars
             if self.has_prepared_publicbodies():
-                # prepared draft with fixed public bodies
+                # prepared draft with fixed public agencies
                 return self.draft.publicbodies.all()
             self._publicbodies = []
         if hasattr(self, "_publicbodies"):

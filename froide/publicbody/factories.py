@@ -60,7 +60,7 @@ class PublicBodyFactory(DjangoModelFactory):
     class Meta:
         model = PublicBody
 
-    name = factory.Sequence(lambda n: "Pübli€ Body {0}".format(random_name()))
+    name = factory.Sequence(lambda n: "Public Agency {0}".format(random_name()))
     slug = factory.LazyAttribute(lambda o: slugify(o.name))
     description = ""
     url = "http://example.com"
@@ -94,7 +94,7 @@ class PublicBodyChangeProposalFactory(DjangoModelFactory):
     user = factory.SubFactory(UserFactory)
     reason = "Some reason"
 
-    name = factory.Sequence(lambda n: "Changed Pübli€ Body {0}".format(random_name()))
+    name = factory.Sequence(lambda n: "Changed Public Agency {0}".format(random_name()))
     other_names = ""
     url = "http://example.com/change"
     email = factory.Sequence(lambda n: "changed-pb-{0}@{0}.example.com".format(n))

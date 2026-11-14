@@ -145,7 +145,6 @@ def test_signup(world, client):
     response = client.post(reverse("account-signup"), post)
     assert response.status_code == 200
     post["user_email"] = "horst.porst@example.com"
-    post["address"] = "MyOwnPrivateStree 5\n31415 Pi-Ville"
 
     response = client.post(reverse("account-signup"), post)
 
@@ -156,7 +155,6 @@ def test_signup(world, client):
     user = User.objects.get(email=post["user_email"])
     assert user.first_name == post["first_name"]
     assert user.last_name == post["last_name"]
-    assert user.address == post["address"]
     assert mail.outbox[0].to[0] == post["user_email"]
 
     # sign up with email that is not confirmed
@@ -188,7 +186,6 @@ def test_overlong_name_signup(world, client):
         "terms": "on",
         "private": True,
         "user_email": "horst.porst@example.com",
-        "address": "MyOwnPrivateStree 5\n31415 Pi-Ville",
         "time": (datetime.now(timezone.utc) - timedelta(seconds=30)).timestamp(),
     }
     client.logout()
@@ -208,7 +205,6 @@ def test_signup_too_fast(world, client):
         "terms": "on",
         "private": True,
         "user_email": "horst.porst@example.com",
-        "address": "MyOwnPrivateStree 5\n31415 Pi-Ville",
         # Signup in less than 5 seconds
         "time": (datetime.now(timezone.utc) - timedelta(seconds=3)).timestamp(),
     }
@@ -226,7 +222,6 @@ def test_signup_same_name(world, client):
         "terms": "on",
         "private": True,
         "user_email": "horst.porst@example.com",
-        "address": "MyOwnPrivateStree 5\n31415 Pi-Ville",
         "time": (datetime.now(timezone.utc) - timedelta(seconds=30)).timestamp(),
     }
     response = client.post(reverse("account-signup"), post)
@@ -285,7 +280,6 @@ def test_confirmation_process(world, client):
         first_name="Stefan",
         last_name="Wehrmeyer",
         user_email="sw@example.com",
-        address="SomeRandomAddress\n11234 Bern",
         private=True,
     )
     AccountService(user).send_confirmation_mail()
@@ -379,7 +373,6 @@ def test_next_link_signup(world, client):
         "terms": "on",
         "private": True,
         "user_email": "horst.porst@example.com",
-        "address": "MyOwnPrivateStree 5\n31415 Pi-Ville",
         "next": url,
         "time": (datetime.now(timezone.utc) - timedelta(seconds=30)).timestamp(),
     }
@@ -539,14 +532,10 @@ def test_change_user(world, client):
     assert ok
     response = client.post(reverse("account-change_user"), data)
     assert response.status_code == 302
-    data["address"] = ""
     response = client.post(reverse("account-change_user"), data)
     assert response.status_code == 302
-    data["address"] = "Some Value"
     response = client.post(reverse("account-change_user"), data)
     assert response.status_code == 302
-    user = User.objects.get(username="sw")
-    assert user.address == data["address"]
 
 
 @pytest.mark.django_db
@@ -693,7 +682,6 @@ def test_change_email(world, client):
     response = client.post(
         reverse("account-change_user"),
         {
-            "address": "Test",
             "email": "not-email",
         },
     )
@@ -707,7 +695,6 @@ def test_change_email(world, client):
     response = client.post(
         reverse("account-change_user"),
         {
-            "address": "Test",
             "email": "not-email",
         },
     )
@@ -715,14 +702,13 @@ def test_change_email(world, client):
     assert len(mail.outbox) == 0
 
     response = client.post(
-        reverse("account-change_user"), {"address": "Test", "email": user.email}
+        reverse("account-change_user"), {"email": user.email}
     )
     assert response.status_code == 302
     assert len(mail.outbox) == 0
     response = client.post(
         reverse("account-change_user"),
         {
-            "address": "Test",
             "email": new_email,
         },
     )
@@ -808,7 +794,6 @@ def test_account_delete(world, client):
     assert user.last_name == ""
     assert user.email is None
     assert user.username == "u%s" % user.pk
-    assert user.address == ""
     assert user.organization_name == ""
     assert user.organization_url == ""
     assert user.private

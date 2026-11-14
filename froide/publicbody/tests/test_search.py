@@ -21,7 +21,7 @@ def publicbody_data(db):
     hamburg = JurisdictionFactory(name="Hamburg", slug="hamburg")
 
     # Classifications
-    ministry = ClassificationFactory(name="Ministry", slug="ministry")
+    ministry = ClassificationFactory(name="Department", slug="ministry")
     agency = ClassificationFactory(name="Agency", slug="agency")
 
     # Categories
@@ -380,7 +380,7 @@ def test_proposals_not_in_search(world, client):
 
     api_url = reverse("api:publicbody-search")
 
-    # make sure proposed public bodies are not indexed and returned in search api
+    # make sure proposed public agencies are not indexed and returned in search api
     with realtime_search():
         pb_proposal = PublicBodyFactory.create(name="Indextest-1", confirmed=False)
         pb_confirmed = PublicBodyFactory.create(name="Indextest-2", confirmed=True)

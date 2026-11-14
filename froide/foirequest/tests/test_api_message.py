@@ -209,7 +209,7 @@ def test_message_draft(client: Client, user):
     client.logout()
     assert client.login(email=user.email, password="froide")
 
-    # user send a message to public body
+    # user send a message to public agency
     public_body = factories.PublicBodyFactory()
     request_data = {
         "request": reverse("api:request-detail", kwargs={"pk": request.pk}),

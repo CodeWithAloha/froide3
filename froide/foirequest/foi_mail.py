@@ -45,6 +45,7 @@ def send_foi_mail(
     message,
     from_email,
     recipient_list,
+    bcc=None,
     attachments=None,
     fail_silently=False,
     **kwargs,
@@ -86,6 +87,7 @@ def send_foi_mail(
         message,
         from_email,
         recipient_list,
+        bcc=bcc,
         connection=connection,
         headers=headers,
     )
@@ -185,7 +187,7 @@ class DeferredMessageNeeded(Exception):
         super().__init__(*args, **kwargs)
 
 
-def _deliver_mail(email: ParsedEmail, mail_bytes=None, manual=False):
+def 0_deliver_mail(email: ParsedEmail, mail_bytes=None, manual=False):
     received_list = (
         email.to + email.cc + email.resent_to + email.resent_cc + email.x_original_to
     )
@@ -267,11 +269,11 @@ def check_delivery_conditions(
         return None, None
 
     if publicbody:
-        # if email can be matched to public body, deliver to foirequest
+        # if email can be matched to public agency, deliver to foirequest
         return foirequest, publicbody
 
     if parsed_email.bounce_info.is_bounce:
-        # If public body cannot be found, but it's a bounce message, deliver
+        # If public agency cannot be found, but it's a bounce message, deliver
         return foirequest, None
 
     # No match and not bounce, raise DeferredMessageNeeded

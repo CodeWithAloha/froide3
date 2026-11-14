@@ -56,7 +56,7 @@ def test_new_publicbody_proposal(client, dummy_user):
     assert response.status_code == 200
     data = {
         "name": existing_publicbody.name,
-        "reason": "I want to add this public body",
+        "reason": "I want to add this public agency",
         "email": "pb@example.com",
         "url": "http://example.com",
         "address": "An address",
@@ -69,7 +69,7 @@ def test_new_publicbody_proposal(client, dummy_user):
     # Name already exists
     assert "name" in response.context["form"].errors
 
-    data["name"] = "New Public Body"
+    data["name"] = "New Public Agency"
     response = client.post(propose_url, data)
     assert response.status_code == 302
 
@@ -90,8 +90,8 @@ def test_new_publicbody_proposal_extra_contact(client, dummy_user):
     propose_url = reverse("publicbody-propose")
     client.force_login(dummy_user)
     data = {
-        "name": "New Public Body",
-        "reason": "I want to add this public body",
+        "name": "New Public Agency",
+        "reason": "I want to add this public agency",
         "email": "pb@example.com",
         "url": "http://example.com",
         "address": "An address",
@@ -135,7 +135,7 @@ def test_add_new_proposal_extra_contact(client, dummy_user):
     client.force_login(dummy_user)
     data = {
         "name": publicbody.name,
-        "reason": "I want to add this public body",
+        "reason": "I want to add this public agency",
         "email": publicbody.email,
         "url": publicbody.url,
         "address": publicbody.address,
@@ -234,7 +234,7 @@ def test_accept_new_proposal_extra_contact(client, dummy_user):
 
     data = {
         "name": publicbody.name,
-        "reason": "I want to change this public body",
+        "reason": "I want to change this public agency",
         "email": publicbody.email,
         "url": publicbody.url,
         "address": publicbody.address,

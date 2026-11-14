@@ -28,7 +28,7 @@ from froide.helper.widgets import (
 
 from . import account_email_changed
 from .auth import complete_mfa_authenticate_for_method
-from .models import AccountBlocklist, User
+from .models import User
 from .registries import user_extra_registry
 from .services import (
     ALLOW_PSEUDONYM,
@@ -55,62 +55,7 @@ class UserChangeForm(DjangoUserChangeForm):
         model = User
         fields = "__all__"
 
-
-ADDRESS_REQUIRED_HELP_TEXT = _(
-    "Your address will not be displayed "
-    "publicly and is only needed because a public body "
-    "will likely want to send you paper."
-)
-
-ADDRESS_HELP_TEXT = _(
-    "Your address will not be displayed "
-    "publicly and is only needed in case a public body "
-    "needs to send you paper."
-)
-
-
-class AddressBaseForm(forms.Form):
-    address = forms.CharField(
-        max_length=300,
-        required=False,
-        label=_("Mailing Address"),
-        help_text=ADDRESS_HELP_TEXT,
-        widget=forms.Textarea(
-            attrs={
-                "rows": "3",
-                "class": "form-control",
-                "placeholder": _("Street address,\nPost Code, City"),
-            }
-        ),
-    )
-
-    ALLOW_BLOCKED_ADDRESS = False
-
-    def __init__(self, *args, **kwargs) -> None:
-        super().__init__(*args, **kwargs)
-        if self.fields["address"].required:
-            self.fields["address"].help_text = ADDRESS_REQUIRED_HELP_TEXT
-
-    def get_user(self):
-        raise NotImplementedError
-
-    def clean_address(self) -> str:
-        address = self.cleaned_data["address"]
-        # TODO validate like clientside? cf. addressRegex in user-address.vue
-        if not address:
-            return address
-        if self.ALLOW_BLOCKED_ADDRESS:
-            return address
-        user = self.get_user()
-        if user is not None:
-            if user.is_staff or user.is_trusted:
-                return address
-            if AccountBlocklist.objects.should_block_address(address):
-                raise forms.ValidationError(_("This address cannot be used by you."))
-        return address
-
-
-class NewUserBaseForm(AddressBaseForm):
+class NewUserBaseForm(forms.Form):
     first_name = forms.CharField(
         max_length=30,
         label=_("First name"),
@@ -132,7 +77,7 @@ class NewUserBaseForm(AddressBaseForm):
         help_text=_("Not public. The given address will need to be confirmed."),
         widget=forms.EmailInput(
             attrs={
-                "placeholder": _("mail@ddress.net"),
+                "placeholder": _("dakine@ovahea.com"),
                 "class": "form-control",
                 "autocomplete": "username",
             }
@@ -146,7 +91,7 @@ class NewUserBaseForm(AddressBaseForm):
             label=_("Hide my name from public view"),
             help_text=mark_safe(
                 _(
-                    "If you check this, your name will still appear in requests to public bodies, but we will do our best to not display it publicly. However, we cannot guarantee your anonymity"
+                    "If you check this, your name will still appear in requests to public agencies, but we will do our best to not display it publicly. However, we cannot guarantee your anonymity"
                 )
             ),
             choices=[
@@ -184,10 +129,8 @@ class NewUserBaseForm(AddressBaseForm):
     field_order = ["first_name", "last_name", "user_email"]
 
     def __init__(self, *args, **kwargs) -> None:
-        address_required = kwargs.pop("address_required", False)
         super().__init__(*args, **kwargs)
-        self.fields["address"].required = address_required
-        if ALLOW_PSEUDONYM and not address_required:
+        if ALLOW_PSEUDONYM:
             self.fields["first_name"].help_text = format_html(
                 _(
                     '<a target="_blank" href="{url}">You may use a pseudonym if you don\'t need to receive postal messages</a>.'
@@ -299,31 +242,11 @@ class NewUserWithPasswordForm(NewUserForm):
         return cleaned
 
 
-class AddressForm(JSONMixin, AddressBaseForm):
-    ALLOW_BLOCKED_ADDRESS = False
-
-    def __init__(self, *args, **kwargs) -> None:
-        address_required = kwargs.pop("address_required", False)
-        self.request = kwargs.pop("request", None)
-        super().__init__(*args, **kwargs)
-        self.fields["address"].required = address_required
-
-    def get_user(self):
-        return self.request.user
-
-    def save(self, user: SimpleLazyObject) -> None:
-        address = self.cleaned_data["address"]
-        if address:
-            user.address = address
-            AccountService.check_against_blocklist(user, save=False)
-            user.save()
-
-
 class UserLoginForm(AuthenticationForm):
     username = forms.EmailField(
         widget=forms.EmailInput(
             attrs={
-                "placeholder": _("mail@ddress.net"),
+                "placeholder": _("dakine@ovahea.com"),
                 "class": "form-control",
                 "autocomplete": "username",
             }
@@ -394,7 +317,7 @@ class PasswordResetForm(auth.forms.PasswordResetForm):
     email = forms.EmailField(
         widget=forms.EmailInput(
             attrs={
-                "placeholder": _("mail@ddress.net"),
+                "placeholder": _("dakine@ovahea.com"),
                 "class": "form-control",
                 "autocomplete": "username",
             }
@@ -408,7 +331,7 @@ class UserChangeDetailsForm(forms.Form):
         required=False,
         widget=forms.EmailInput(
             attrs={
-                "placeholder": _("mail@ddress.net"),
+                "placeholder": _("dakine@ovahea.com"),
                 "class": "form-control",
                 "autocomplete": "username",
             }
@@ -416,34 +339,21 @@ class UserChangeDetailsForm(forms.Form):
         label=_("Your email address"),
     )
 
-    address = forms.CharField(
-        max_length=300,
-        label=_("Your mailing address"),
-        help_text=_("Your address will never be displayed publicly."),
-        widget=forms.Textarea(
-            attrs={
-                "placeholder": _("Street, Post Code, City"),
-                "class": "form-control",
-                "rows": "3",
-            }
-        ),
-        required=False,
-    )
-    field_order = ["email", "address"]
+    field_order = ["email"]
 
     def __init__(self, user: SimpleLazyObject, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.user = user
-        self.fields["address"].initial = self.user.address
         self.fields["email"].initial = self.user.email
         self.order_fields(self.field_order)
 
     def clean_email(self) -> str:
         email = self.cleaned_data["email"].lower()
+        if 'address' in self.cleaned_data:
+            self.user.address = self.cleaned_data['address']
         return email
 
     def save(self) -> None:
-        self.user.address = self.cleaned_data["address"]
         AccountService.check_against_blocklist(self.user, save=False)
         self.user.save()
 

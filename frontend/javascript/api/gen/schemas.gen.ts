@@ -1076,7 +1076,7 @@ export const FoiMessageStatusEnumSchema = {
   ],
   type: 'string',
   description:
-    '* `awaiting_user_confirmation` - Awaiting user confirmation\n* `publicbody_needed` - Public Body needed\n* `awaiting_publicbody_confirmation` - Awaiting Public Body confirmation\n* `awaiting_response` - Awaiting response\n* `awaiting_classification` - Request awaits classification\n* `asleep` - Request asleep\n* `resolved` - Request resolved'
+    '* `awaiting_user_confirmation` - Awaiting user confirmation\n* `publicbody_needed` - Public Agency needed\n* `awaiting_publicbody_confirmation` - Awaiting Public Agency confirmation\n* `awaiting_response` - Awaiting response\n* `awaiting_classification` - Request awaits classification\n* `asleep` - Request asleep\n* `resolved` - Request resolved'
 } as const
 
 export const FoiRequestDetailSchema = {
@@ -3052,7 +3052,7 @@ export const ProblemReportKindEnumSchema = {
   ],
   type: 'string',
   description:
-    "* `message_not_delivered` - Your message was not delivered.\n* `attachment_broken` - The attachments don't seem to work.\n* `redaction_needed` - More redactions are needed.\n* `foi_help_needed` - You need help to understand or reply to this message.\n* `other` - Something else...\n* `not_foi` - This is not a proper FOI request.\n* `not_nice` - Content is against netiquette.\n* `info_outdated` - Published information is outdated.\n* `info_wrong` - Published information is wrong.\n* `bounce_publicbody` - You received a bounce mail from the public body.\n* `mail_inauthentic` - Received mail does not pass authenticity checks."
+    "* `message_not_delivered` - Your message was not delivered.\n* `attachment_broken` - The attachments don't seem to work.\n* `redaction_needed` - More redactions are needed.\n* `foi_help_needed` - You need help to understand or reply to this message.\n* `other` - Something else...\n* `not_foi` - This is not a proper FOI request.\n* `not_nice` - Content is against netiquette.\n* `info_outdated` - Published information is outdated.\n* `info_wrong` - Published information is wrong.\n* `bounce_publicbody` - You received a bounce mail from the public agency.\n* `mail_inauthentic` - Received mail does not pass authenticity checks."
 } as const
 
 export const PublicBodySchema = {

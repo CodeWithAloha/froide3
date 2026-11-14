@@ -432,14 +432,14 @@ class FoiMessageSerializer(serializers.HyperlinkedModelSerializer):
             if sender_public_body is None or recipient_public_body is not None:
                 raise ValidationError(
                     _(
-                        "Response messages must have a sender public body, no sender user and no recipient public body."
+                        "Response messages must have a sender public agency, no sender user and no recipient public agency."
                     )
                 )
         else:
             if sender_public_body is not None or recipient_public_body is None:
                 raise ValidationError(
                     _(
-                        "Non-response messages must have a recipent public body, but no sender public body."
+                        "Non-response messages must have a recipent public agency, but no sender public agency."
                     )
                 )
 

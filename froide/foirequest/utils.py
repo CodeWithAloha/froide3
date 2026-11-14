@@ -327,7 +327,7 @@ def get_publicbody_for_email(
     if len(pbs) == 1:
         return pbs[0]
     elif foirequest.public_body in pbs:
-        # likely the request's public body
+        # likely the request's public agency
         return foirequest.public_body
 
     if include_deferred:
@@ -425,7 +425,7 @@ def get_emails_from_request_iterator(
     foirequest, include_mediator=True
 ) -> Iterator[PublicBodyEmailInfo]:
     if foirequest.public_body:
-        # Get emails from public body / mediator
+        # Get emails from public agency / mediator
         yield from get_publicbody_emails(
             foirequest.public_body, include_mediator=include_mediator
         )
@@ -983,7 +983,7 @@ def postal_date(
     # The problem we have when uploading postal messages is that they do not have a time, so we
     # need to invent one. 12am is a good assumption, however if we already have messages on this
     # date, we need to add it *after* all those messages
-    # Example: User sends a foi request on 2011-01-01 at 3pm, the public body is fast and sends
+    # Example: User sends a foi request on 2011-01-01 at 3pm, the public agency is fast and sends
     # out the reply letter on the same day. If we would assume 12am as the letter time, we would
     # place the postal reply earlier than the users message
     possible_message_timestamps = [

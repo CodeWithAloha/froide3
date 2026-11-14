@@ -36,7 +36,7 @@ class PublicBodyForm(JSONMixin, forms.Form):
     publicbody = forms.ModelChoiceField(
         queryset=PublicBody.objects.all(),
         widget=PublicBodySelect,
-        label=_("Search for a topic or a public body:"),
+        label=_("Search for a topic or a public agency:"),
     )
 
     is_multi = False
@@ -61,7 +61,7 @@ class MultiplePublicBodyForm(PublicBodyForm):
             "categories",
             "laws",
         ),
-        label=_("Search for a topic or a public body:"),
+        label=_("Search for a topic or a public agency:"),
         widget=forms.MultipleHiddenInput,
     )
 
@@ -86,7 +86,7 @@ class PublicBodyProposalForm(forms.ModelForm):
         label=_("Reason"),
         required=False,
         help_text=_(
-            "Please give a reason why this public body should be added if that is not obvious."
+            "Please give a reason why this public agency should be added if that is not obvious."
         ),
         widget=BootstrapTextarea,
     )
@@ -117,7 +117,7 @@ class PublicBodyProposalForm(forms.ModelForm):
     )
     url = forms.URLField(
         label=_("URL of Website"),
-        help_text=_("URL of this public body's website."),
+        help_text=_("URL of this public agency's website."),
         widget=forms.URLInput(
             attrs={"class": "form-control", "placeholder": "https://"}
         ),
@@ -201,7 +201,7 @@ class PublicBodyProposalForm(forms.ModelForm):
         help_text=_(
             "Give the jurisdiction under which this authority falls. "
             "This determines what laws apply to it. Often "
-            "it can determined by where the public body is based or who"
+            "it can determined by where the public agency is based or who"
             "the supervising authority is."
         ),
         queryset=Jurisdiction.objects.all(),
@@ -373,11 +373,11 @@ class PublicBodyAcceptProposalForm(PublicBodyProposalForm):
             )
             if proposal.user != user and not batch:
                 proposal.user.send_mail(
-                    _("Changes to public body “{name}” have been applied").format(
+                    _("Changes to public agency “{name}” have been applied").format(
                         name=pb.name
                     ),
                     _(
-                        "Hello,\n\nYou can find the changed public body here:"
+                        "Hello,\n\nYou can find the changed public agency here:"
                         "\n\n{url}\n\nAll the Best,\n{site_name}"
                     ).format(
                         url=pb.get_absolute_domain_url(), site_name=settings.SITE_NAME
@@ -422,10 +422,10 @@ class PublicBodyAcceptProposalForm(PublicBodyProposalForm):
         creator = pb.created_by
         if creator and not batch:
             creator.send_mail(
-                _("Your public body proposal “%s” was rejected") % pb.name,
+                _("Your public agency proposal “%s” was rejected") % pb.name,
                 _(
                     "Hello,\n\nA moderator has rejected your proposal for a new "
-                    "public body.\n\n{delete_reason}\n\nAll the Best,\n{site_name}"
+                    "public agency.\n\n{delete_reason}\n\nAll the Best,\n{site_name}"
                 ).format(delete_reason=delete_reason, site_name=settings.SITE_NAME),
                 priority=False,
             )

@@ -35,7 +35,7 @@ msgstr ""
 "Mit freundlichen Grüßen"
 
 #: froide/publicbody/admin.py
-msgid "# public bodies"
+msgid "# public agencies"
 msgstr "Anzahl Behörden"
 
 #: froide/foirequest/forms/message.py
@@ -89,12 +89,12 @@ msgstr "%(name)s ist ein(e) %(classification)s in %(juris)s auf %(site_name)s"
 
 #: froide/publicbody/templates/publicbody/show.html
 #, python-format
-msgid "%(name)s is a public body (%(classification)s) in %(juris)s on %(site_name)s"
+msgid "%(name)s is a public agency (%(classification)s) in %(juris)s on %(site_name)s"
 msgstr "%(name)s ist eine Behörde (%(classification)s) in %(juris)s auf %(site_name)s"
 
 #: froide/publicbody/templates/publicbody/show.html
 #, python-format
-msgid "%(name)s is a public body in %(juris)s on %(site_name)s"
+msgid "%(name)s is a public agency in %(juris)s on %(site_name)s"
 msgstr "%(name)s ist eine Behörde in %(juris)s auf %(site_name)s"
 
 #: froide/publicbody/templates/publicbody/snippets/publicbody_item.html
@@ -111,7 +111,7 @@ msgstr "%(query)s Dokumentensuche"
 
 #: froide/templates/scaffold.html
 #, python-format
-msgid "%(site)s helps you to make freedom of information requests to public bodies"
+msgid "%(site)s helps you to make freedom of information requests to public agencies"
 msgstr "%(site)s hilft Ihnen, Informationsfreiheitsanfragen an Behörden zu stellen"
 
 #: froide/templates/admin/base_site.html
@@ -311,7 +311,7 @@ msgid "(current page)"
 msgstr "(aktuelle Seite)"
 
 #: froide/foirequest/views/make_request.py
-msgid "(not sent to public body)"
+msgid "(not sent to public agency)"
 msgstr "(wird Behörde nicht mitgeteilt)"
 
 #: froide/foirequest/templates/foirequest/emails/overdue_reply_footer.txt
@@ -389,7 +389,7 @@ msgstr "<<entfernt>>"
 
 #: froide/foirequest/templates/foirequest/request.html
 #, python-format
-msgid "<a href=\"%(propose_url)s\">Contact us so we can add this public body to our database.</a>"
+msgid "<a href=\"%(propose_url)s\">Contact us so we can add this public agency to our database.</a>"
 msgstr "<a href=\"%(propose_url)s\">Schreiben Sie uns, damit wir diese Behörde in unsere Datenbank aufnehmen.</a>"
 
 #: froide/foirequest/templates/foirequest/snippets/request_item_inner.html
@@ -399,7 +399,7 @@ msgstr "<a href=\"%(url)s\" class=\"link-secondary\">%(name)s</a>"
 
 #: froide/publicbody/templates/publicbody/propose.html
 #, python-format
-msgid "<a href=\"%(url)s\">Please check the list of public bodies</a> if it really does not exist yet."
+msgid "<a href=\"%(url)s\">Please check the list of public agencies</a> if it really does not exist yet."
 msgstr "<a href=\"%(url)s\">Bitte prüfen Sie unsere Liste der Behörden</a>, ob die gewünschte Behörde nicht doch schon existiert."
 
 #: froide/account/forms.py
@@ -431,7 +431,7 @@ msgid "<p>Before you write your own request, you can search our archives. Maybe 
 msgstr "<p>Suchen Sie in unserem Archiv nach ähnlichen Anfragen, bevor Sie eine eigene Anfrage stellen. Vielleicht sind die gewünschten Informationen bereits veröffentlicht.</p>"
 
 #: froide/foirequest/templates/foirequest/request.html
-msgid "<p>Your name will be sent to public bodies. If you want to remain anonymous to the public, you can choose to not display your name on the website. Your name will then be redacted.</p>"
+msgid "<p>Your name will be sent to public agencies. If you want to remain anonymous to the public, you can choose to not display your name on the website. Your name will then be redacted.</p>"
 msgstr "<p>Ihr Name wird als Teil Ihrer Anfrage an die Behörde gesendet. Falls Sie wünschen, dass Ihr Name nicht auf der Website veröffentlicht wird, können Sie – nach außen hin – anonym bleiben. Ihr Name wird dann automatisch geschwärzt.</p>"
 
 #: froide/foirequest/templates/foirequest/request.html
@@ -512,7 +512,7 @@ msgid "A concrete law has been set for this request."
 msgstr "Ein konkretes Gesetz wurde für diese Anfrage festgelegt."
 
 #: froide/foirequest/views/message.py
-msgid "A document should be redacted when it contains information about yourself or the public body's employees."
+msgid "A document should be redacted when it contains information about yourself or the public agency's employees."
 msgstr "Ein Dokument sollte geschwärzt werden, wenn es Informationen über Sie selbst oder Behördenmitarbeiter:innen"
 
 #: froide/organization/templates/organization/organization_update_form.html
@@ -594,7 +594,7 @@ msgid "Accepted Terms"
 msgstr "Bedingungen akzeptiert"
 
 #: froide/foirequest/views/make_request.py
-msgid "Access information by filing a request to a public body. We'll guide you through the process."
+msgid "Access information by filing a request to a public agency. We'll guide you through the process."
 msgstr "Erhalten Sie Zugang zu Informationen, indem Sie eine eigene Anfrage an eine Behörde stellen. Wir unterstützen Sie dabei Schritt für Schritt."
 
 #: froide/settings.py
@@ -914,7 +914,7 @@ msgid "Are these documents a result of your request and not only correspondence?
 msgstr "Sind diese Dokumente das Ergebnis Ihrer Anfrage und nicht bloß Korrespondenz?"
 
 #: froide/foirequest/views/message.py froide/publicbody/widgets.py
-msgid "Are we missing a public body?"
+msgid "Are we missing a public agency?"
 msgstr "Fehlt uns eine Behörde?"
 
 #: froide/foirequest/views/message.py
@@ -955,7 +955,7 @@ msgid "Area"
 msgstr "Fläche"
 
 #: froide/publicbody/templates/publicbody/jurisdiction.html
-msgid "Ask Public Bodies for administrative information — it's your right."
+msgid "Ask Public Agencies for administrative information — it's your right."
 msgstr "Fragen Sie Behörden nach Verwaltungsinformationen – es ist Ihr gutes Recht."
 
 #: froide/foirequest/templates/foirequest/snippets/request_hints.html
@@ -987,7 +987,7 @@ msgid "Assign team to request"
 msgstr "Weise ein Team zu dieser Anfrage zu"
 
 #: froide/foirequest/views/request.py
-msgid "At the bottom of the page you can send replies to the public body or start a mediation process with the mediation authority."
+msgid "At the bottom of the page you can send replies to the public agency or start a mediation process with the mediation authority."
 msgstr "Unten auf der Seite können Sie Antworten an die Behörde senden oder ein Vermittlungsverfahren einleiten."
 
 #: froide/foirequest/templates/foirequest/list.html
@@ -1089,7 +1089,7 @@ msgid "Auto-Redeliver based on subject"
 msgstr "Erneut zustellen auf Basis des Betreffs"
 
 #: froide/foirequest/models/request.py
-msgid "Awaiting Public Body confirmation"
+msgid "Awaiting Public Agency confirmation"
 msgstr "Warte auf Bestätigung der Behörde"
 
 #: froide/foirequest/models/request.py
@@ -1199,7 +1199,7 @@ msgid "Can moderate personal information"
 msgstr "Kann personenbezogene Daten moderieren"
 
 #: froide/publicbody/models/publicbody.py
-msgid "Can moderate public bodies"
+msgid "Can moderate public agencies"
 msgstr "Kann Behörden moderieren"
 
 #: froide/foirequest/models/request.py
@@ -1283,7 +1283,7 @@ msgid "Cannot start saving, upload is not in receiving state."
 msgstr "Kann nicht speichern, Upload ist nicht im Zustand ‘Empfangen’."
 
 #: froide/foirequest/templates/foirequest/request.html
-msgid "Can’t find a specific public body?"
+msgid "Can’t find a specific public agency?"
 msgstr "Sie können eine bestimmte Behörde nicht finden?"
 
 #: froide/publicbody/forms.py
@@ -1299,19 +1299,19 @@ msgid "Categories:"
 msgstr "Kategorien:"
 
 #: froide/publicbody/models/publicbody.py
-msgid "Categorized Public Bodies"
+msgid "Categorized Public Agencies"
 msgstr "Kategorisierte Behörden"
 
 #: froide/publicbody/models/publicbody.py
-msgid "Categorized Public Body"
+msgid "Categorized Public Agency"
 msgstr "Kategorisierte Behörde"
 
 #: froide/publicbody/models/changeproposal.py
-msgid "Categorized Public Body Change Proposal"
+msgid "Categorized Public Agency Change Proposal"
 msgstr "Kategorisierter Behördenänderungsvorschlag"
 
 #: froide/publicbody/models/changeproposal.py
-msgid "Categorized Public Body Change Proposals"
+msgid "Categorized Public Agency Change Proposals"
 msgstr "Kategorisierte Behördenänderungsvorschläge"
 
 #: froide/publicbody/csv_import.py
@@ -1366,7 +1366,7 @@ msgstr "Ändern ohne Übernehmen"
 
 #: froide/publicbody/forms.py
 #, python-brace-format
-msgid "Changes to public body “{name}” have been applied"
+msgid "Changes to public agency “{name}” have been applied"
 msgstr "Änderungen an Behörde „{name}“ wurden vorgenommen"
 
 #: froide/foirequest/templates/foirequest/foiproject_detail.html
@@ -1375,7 +1375,7 @@ msgstr "Alle Anfragen prüfen"
 
 #: froide/publicbody/templates/publicbody/jurisdiction.html
 #, python-format
-msgid "Check out the %(pb_count)s Public Bodies."
+msgid "Check out the %(pb_count)s Public Agencies."
 msgstr "Stöbern Sie in %(pb_count)s Behörden."
 
 #: froide/foirequest/templates/foirequest/header/info-box.html
@@ -1492,7 +1492,7 @@ msgstr "Wähle einen Hinweis zum Anhängen aus..."
 
 #: froide/foirequest/templates/foirequest/request.html
 #: froide/foirequest/views/make_request.py
-msgid "Choose public body"
+msgid "Choose public agency"
 msgstr "Behörde auswählen"
 
 #: froide/document/forms.py
@@ -1649,7 +1649,7 @@ msgstr "Abgeschlossen"
 
 #: froide/publicbody/admin.py
 #, python-format
-msgid "Concerning your public body proposal “%s”"
+msgid "Concerning your public agency proposal “%s”"
 msgstr "Ihr Vorschlag für Behörde „%s“"
 
 #: froide/foirequest/views/message.py
@@ -1665,7 +1665,7 @@ msgid "Confirm deletion"
 msgstr "Löschen bestätigen"
 
 #: froide/publicbody/templates/publicbody/accept_proposals.html
-msgid "Confirm public body"
+msgid "Confirm public agency"
 msgstr "Behörde bestätigen"
 
 #: froide/foirequest/admin.py
@@ -2157,7 +2157,7 @@ msgid "Delete proposal"
 msgstr "Vorschlag löschen"
 
 #: froide/publicbody/templates/publicbody/accept_proposals.html
-msgid "Delete proposed public body"
+msgid "Delete proposed public agency"
 msgstr "Vorgeschlagene Behörde löschen"
 
 #: froide/foirequest/templates/foirequest/account/list_requests.html
@@ -2261,7 +2261,7 @@ msgid "Developer"
 msgstr "Entwickler:innen"
 
 #: froide/foirequest/views/message.py
-msgid "Did the public body demand compensation?"
+msgid "Did the public agency demand compensation?"
 msgstr "Hat die Behörde Kosten verlangt?"
 
 #: froide/foirequest/forms/postal.py
@@ -2289,7 +2289,7 @@ msgid "Distinct jurisdictions:"
 msgstr "Eindeutige Zuständigkeitsbereiche:"
 
 #: froide/foirequest/templates/admin/foirequest/foirequest/change_list.html
-msgid "Distinct public bodies:"
+msgid "Distinct public agencies:"
 msgstr "Eindeutige Behörden:"
 
 #: froide/foirequest/templates/admin/foirequest/foirequest/change_list.html
@@ -2507,7 +2507,7 @@ msgid "E-Mail only"
 msgstr "Nur E-Mail"
 
 #: froide/publicbody/admin.py
-msgid "E-Mail was sent to public body creator."
+msgid "E-Mail was sent to public agency creator."
 msgstr "E-Mail an Behörden-Ersteller:in wurde versendet."
 
 #: froide/account/templates/oauth2_provider/application_detail.html
@@ -2733,7 +2733,7 @@ msgid "Events"
 msgstr "Ereignisse"
 
 #: froide/templates/index.html
-msgid "Every citizen has the right under the Freedom of Information Laws to ask for and receive access to information from Public Bodies concerning public affairs."
+msgid "Every citizen has the right under the Freedom of Information Laws to ask for and receive access to information from Public Agencies concerning public affairs."
 msgstr "Jede:r Bürger:in hat nach den Informations&shy;gesetzen das Recht, Zugang zu Informationen der öffentlichen Hand zu erhalten."
 
 #: froide/publicbody/forms.py
@@ -2778,7 +2778,7 @@ msgid "Export of user '{user}' started."
 msgstr "Export von Nutzer:in '{user}' gestartet."
 
 #: froide/foirequest/admin.py
-msgid "Export public body tag stats to CSV"
+msgid "Export public agency tag stats to CSV"
 msgstr "Statistik der Behörden-Nachrichten-Tags nach CSV exportieren"
 
 #: froide/account/admin.py froide/publicbody/admin.py
@@ -3095,7 +3095,7 @@ msgid "Freedom of Information Requests on %(sitename)s"
 msgstr "Informationsfreiheitsanfragen auf %(sitename)s"
 
 #: froide/templates/snippets/meta.html
-msgid "Freedom of Information Requests, Freedom of Information Law, Public Body Information"
+msgid "Freedom of Information Requests, Freedom of Information Law, Public Agency Information"
 msgstr "Informationsfreiheitsanfragen, Informationsfreiheitsgesetze, Behördeninformationen"
 
 #: froide/publicbody/templates/publicbody/jurisdiction.html
@@ -3126,7 +3126,7 @@ msgid "From Name"
 msgstr "Von Name"
 
 #: froide/foirequest/models/message.py
-msgid "From Public Body"
+msgid "From Public Agency"
 msgstr "Von Behörde"
 
 #: froide/foirequest/models/message.py
@@ -3213,7 +3213,7 @@ msgid "Get updates for this request via email"
 msgstr "Erhalten Sie Benachrichtigungen per E-Mail"
 
 #: froide/publicbody/forms.py
-msgid "Give the jurisdiction under which this authority falls. This determines what laws apply to it. Often it can determined by where the public body is based or whothe supervising authority is."
+msgid "Give the jurisdiction under which this authority falls. This determines what laws apply to it. Often it can determined by where the public agency is based or whothe supervising authority is."
 msgstr "Geben Sie bitte den Zuständigkeitsbereich an, unter den diese Behörde fällt. Das bestimmt welche Gesetze auf die Behörde angewendet werden. Oft kann die Zuständigkeit über den Sitz der Behörde oder die zuständige Aufsichtsbehörde bestimmt werden."
 
 #: froide/foirequest/views/message.py
@@ -3505,7 +3505,7 @@ msgid ""
 "Hello %(name)s,\n"
 "\n"
 "You have stated to be a journalist while signing up and to use %(site_name)s for your research.\n"
-"We can enable advanced features for your account, such as sending requests to multiple public bodies at once.\n"
+"We can enable advanced features for your account, such as sending requests to multiple public agencies at once.\n"
 "Please provide some brief verification in order for us to grant you access.\n"
 "\n"
 "Cheers,\n"
@@ -3581,7 +3581,7 @@ msgid ""
 "\n"
 "%(upload_action_url)s\n"
 "\n"
-"If you have not received an answer, you can send a reminder to the public body:\n"
+"If you have not received an answer, you can send a reminder to the public agency:\n"
 "\n"
 "%(write_action_url)s\n"
 "\n"
@@ -3616,7 +3616,7 @@ msgid ""
 "Hello %(name)s,\n"
 "\n"
 "Your request “%(title)s” seems to not have gotten an answer in the required time and became overdue.\n"
-"We recommend that you send another message to the public body to check the status of the request and if they received it.\n"
+"We recommend that you send another message to the public agency to check the status of the request and if they received it.\n"
 "\n"
 "%(write_action_url)s\n"
 "\n"
@@ -3705,7 +3705,7 @@ msgstr ""
 msgid ""
 "Hello %(name)s,\n"
 "\n"
-"you received a suggestion for a Public Body on your request “%(title)s”."
+"you received a suggestion for a Public Agency on your request “%(title)s”."
 msgstr ""
 "Hallo %(name)s,\n"
 "\n"
@@ -3737,7 +3737,7 @@ msgstr ""
 msgid ""
 "Hello %(name)s,\n"
 "\n"
-"your project \"%(title)s\" has been created and we are sending the requests to the public bodies now. We will notify you when you get responses.\n"
+"your project \"%(title)s\" has been created and we are sending the requests to the public agencies now. We will notify you when you get responses.\n"
 "\n"
 "%(action_url)s\n"
 "\n"
@@ -3861,7 +3861,7 @@ msgstr ""
 msgid ""
 "Hello,\n"
 "\n"
-"A moderator has rejected your proposal for a new public body.\n"
+"A moderator has rejected your proposal for a new public agency.\n"
 "\n"
 "{delete_reason}\n"
 "\n"
@@ -3882,7 +3882,7 @@ msgstr ""
 msgid ""
 "Hello,\n"
 "\n"
-"You can find the approved public body here:\n"
+"You can find the approved public agency here:\n"
 "\n"
 "{url}\n"
 "\n"
@@ -3903,7 +3903,7 @@ msgstr ""
 msgid ""
 "Hello,\n"
 "\n"
-"You can find the changed public body here:\n"
+"You can find the changed public agency here:\n"
 "\n"
 "{url}\n"
 "\n"
@@ -3963,7 +3963,7 @@ msgid "Here you can see the status your request. Below you can update the status
 msgstr "Hier können Sie den Status Ihrer Anfrage sehen. Hier drunter können Sie den Status der Anfrage aktualisieren, wenn Sie eine Antwort erhalten haben."
 
 #: froide/foirequest/templates/foirequest/body/actions/send_message.html
-msgid "Here you can send another message to this public body."
+msgid "Here you can send another message to this public agency."
 msgstr "Hier können Sie eine weitere Nachricht an die Behörde senden."
 
 #: froide/publicbody/models/jurisdiction.py
@@ -4002,7 +4002,7 @@ msgid "Home Page"
 msgstr "Startseite"
 
 #: froide/foirequest/views/message.py
-msgid "How much compensation does the public body demand?"
+msgid "How much compensation does the public agency demand?"
 msgstr "Welchen Betrag hat die Behörde verlangt?"
 
 #: froide/searchalert/forms.py
@@ -4071,7 +4071,7 @@ msgid "Identical request count"
 msgstr "Anzahl Identischer Anfragen"
 
 #: froide/foirequest/forms/message.py
-msgid "If the public body is asking for your post address, check this and we will append the address below."
+msgid "If the public agency is asking for your post address, check this and we will append the address below."
 msgstr "Falls die Behörde Ihre Postanschrift benötigt, setzen Sie den Haken und wir werden Ihre Anschrift an die Nachricht anhängen."
 
 #: froide/foirequest/forms/message.py
@@ -4087,7 +4087,7 @@ msgid "If this authority is responsible for specific regions, you can select the
 msgstr "Wenn diese Behörde für bestimmte Regionen zuständig ist, können diese hier ausgewählt werden."
 
 #: froide/foirequest/templates/foirequest/snippets/redaction_explanation.html
-msgid "If this document <strong>is not a letter to you</strong> from a public body, but any other kind of document, it very likely <strong>does not need a redaction</strong>."
+msgid "If this document <strong>is not a letter to you</strong> from a public agency, but any other kind of document, it very likely <strong>does not need a redaction</strong>."
 msgstr "Falls dieses Dokument <strong>kein Brief an Sie</strong> von einer Behörde ist, sondern eine andere Art von Dokument, dann müssen Sie es sehr wahrscheinlich <strong>nicht schwärzen</strong>."
 
 #: froide/foirequest/templates/foirequest/snippets/redaction_explanation.html
@@ -4103,7 +4103,7 @@ msgid "If you changed your mind about the public visibility of your account name
 msgstr "Wenn Sie sich bezüglich der Sichtbarkeit Ihres Namens umentschieden haben, dann können Sie hier Ihr Konto auf <b>privat</b> schalten. Dies wird automatisch Ihren Namen entfernen, wo er gerade öffentlich sichtbar ist."
 
 #: froide/account/forms.py
-msgid "If you check this, your name will still appear in requests to public bodies, but we will do our best to not display it publicly. However, we cannot guarantee your anonymity"
+msgid "If you check this, your name will still appear in requests to public agencies, but we will do our best to not display it publicly. However, we cannot guarantee your anonymity"
 msgstr "Ihr Name wird an die Behörde gesendet, aber wir werden ihn nach Möglichkeit nicht öffentlich anzeigen. Wir können jedoch aus technischen Gründen <b>keine</b> komplette Anonymität garantieren."
 
 #: froide/account/templates/account/new.html
@@ -4131,11 +4131,11 @@ msgid "If you think your request was not properly handled or it is delayed, you 
 msgstr "Wenn Sie denken, dass diese Anfrage nicht ordentlich beantwortet wurde oder verspätet ist, dann können Sie um Vermittlung bitten. Hier können Sie der zuständigen Vermittlungsbehörde Ihren Fall erklären."
 
 #: froide/foirequest/templates/foirequest/emails/public_body_suggestion_received.txt
-msgid "If you want to use this Public Body, go to your request and chose the Public Body from the list. Here is a link to your request:"
+msgid "If you want to use this Public Agency, go to your request and chose the Public Agency from the list. Here is a link to your request:"
 msgstr "Wenn Sie Ihre Anfrage an diese Behörde richten wollen, rufen Sie Ihre Anfrage auf und wählen Sie die Behörde aus der Liste. Hier ist ein Link zu Ihrer Anfrage:"
 
 #: froide/publicbody/templates/publicbody/propose.html
-msgid "If you'd like to add a lot of public bodies at once, please contact the site moderators."
+msgid "If you'd like to add a lot of public agencies at once, please contact the site moderators."
 msgstr "Wenn Sie viele Behörden auf einmal vorschlagen möchten, treten Sie bitte direkt mit uns in Kontakt."
 
 #: froide/account/forms.py
@@ -4271,11 +4271,11 @@ msgid "Is this document a result of your request and not only correspondence?"
 msgstr "Ist dieses Dokument das Ergebnis Ihrer Anfrage und nicht bloß Korrespondenz?"
 
 #: froide/foirequest/views/message.py
-msgid "Is this the public body that sent the letter?"
+msgid "Is this the public agency that sent the letter?"
 msgstr "Ist dies die Behörde, von der der Brief stammt?"
 
 #: froide/foirequest/views/message.py
-msgid "Is this the public body you have sent the letter to?"
+msgid "Is this the public agency you have sent the letter to?"
 msgstr "Ist dies die Behörde, an die Sie den Brief gesendet haben?"
 
 #: froide/foisite/templates/foisite/banner.html
@@ -4485,7 +4485,7 @@ msgid "Make a Freedom of Information request"
 msgstr "Stellen Sie eine Informationsfreiheitsanfrage"
 
 #: froide/publicbody/templates/publicbody/show.html
-msgid "Make a Request to this public body!"
+msgid "Make a Request to this public agency!"
 msgstr "Stellen Sie eine Anfrage an diese Behörde"
 
 #: froide/templates/header.html
@@ -4999,7 +4999,7 @@ msgid "New search results for “{query}” since {date}"
 msgstr "Neue Suchergebnisse für „{query}“ seit {date}"
 
 #: froide/foirequest/signals.py
-msgid "New suggestion for a Public Body"
+msgid "New suggestion for a Public Agency"
 msgstr "Neuer Behördenvorschlag für Ihre Anfrage"
 
 #: froide/foirequest/templates/foirequest/publicbody_upload.html
@@ -5021,7 +5021,7 @@ msgid "No Internet connection"
 msgstr "Keine Internetverbindung"
 
 #: froide/foirequest/views/message.py froide/publicbody/widgets.py
-msgid "No Public Bodies found for this query."
+msgid "No Public Agencies found for this query."
 msgstr "Es wurden keine Behörden für diesen Suchbegriff gefunden."
 
 #: froide/accesstoken/templates/accesstoken/token_widget.html
@@ -5045,7 +5045,7 @@ msgid "No files were added from empty folder"
 msgstr "Keine Dateien konnten hinzugefügt werden, da der Ordner leer war"
 
 #: froide/publicbody/templates/publicbody/admin/show_georegions.html
-msgid "No geo region available for these public bodies"
+msgid "No geo region available for these public agencies"
 msgstr "Keine Georegionen für diese Behörden verfügbar"
 
 #: froide/templates/mfa/mfakey_list.html
@@ -5109,7 +5109,7 @@ msgid "No, I am <strong>not a journalist</strong>"
 msgstr "Nein, ich bin <strong>kein*e Journalist*in</strong>"
 
 #: froide/foirequest/views/message.py
-msgid "No, pick different public body."
+msgid "No, pick different public agency."
 msgstr "Nein, andere Behörde wählen."
 
 #: froide/foirequest/templates/foirequest/header/tour.html
@@ -5137,7 +5137,7 @@ msgid "Non-public attachments"
 msgstr "Nicht-öffentliche Anhänge"
 
 #: froide/foirequest/serializers.py
-msgid "Non-response messages must have a recipent public body, but no sender public body."
+msgid "Non-response messages must have a recipent public agency, but no sender public agency."
 msgstr "Nachrichten, die keine Antwort sind, benötigen eine Behörde als Empfänger, jedoch keine Behörde als Sender."
 
 #: froide/helper/admin_utils.py
@@ -5251,8 +5251,8 @@ msgstr[1] "%(counter)s identische Anfragen"
 
 #: froide/publicbody/templates/publicbody/show.html
 #, python-format
-msgid "One request to this public body"
-msgid_plural "%(count)s requests to this public body"
+msgid "One request to this public agency"
+msgid_plural "%(count)s requests to this public agency"
 msgstr[0] "Eine Anfrage an diese Behörde"
 msgstr[1] "%(count)s Anfragen an diese Behörde"
 
@@ -5508,7 +5508,7 @@ msgid "Please allow access to your camera"
 msgstr "Bitte erlauben Sie Zugriff auf Ihre Kamera"
 
 #: froide/foirequest/templates/foirequest/snippets/withdrawal_popup.html
-msgid "Please also inform the public body that you want to widthdraw your request by sending them a message."
+msgid "Please also inform the public agency that you want to widthdraw your request by sending them a message."
 msgstr "Bitte informieren Sie auch die Behörde, dass Sie Ihre Anfrage zurückziehen wollen, indem Sie der Behörde eine Nachricht schicken."
 
 #: froide/helper/spam.py
@@ -5540,7 +5540,7 @@ msgid "Please check your personal information and then continue."
 msgstr "Bitte überprüfen Sie Ihre Angaben und klicken Sie dann auf Weiter."
 
 #: froide/foirequest/templates/foirequest/request.html
-msgid "Please choose a public body first and click on the «Make a request» button."
+msgid "Please choose a public agency first and click on the «Make a request» button."
 msgstr "Bitte wählen Sie zuerst eine Behörde aus und klicken Sie dann auf den „Anfrage stellen“-Knopf."
 
 #: froide/foirequest/templates/foirequest/body/settings.html
@@ -5637,7 +5637,7 @@ msgid "Please fill out your name below, or in the next step"
 msgstr "Bitte geben Sie Ihren Namen unten ein, bzw. im nächsten Schritt"
 
 #: froide/publicbody/management/commands/validate_publicbodies.py
-msgid "Please find attached the results of the public body validation"
+msgid "Please find attached the results of the public agency validation"
 msgstr "Sie finden anbei das Ergebnis der Behördenüberprüfung"
 
 #: froide/publicbody/templates/publicbody/accept_proposals.html
@@ -5645,7 +5645,7 @@ msgid "Please give a reason for not accepting this proposal. It will be send to 
 msgstr "Bitte geben Sie einen Grund für die Ablehnung des Vorschlags an. Der Grund wird an die Person gesendet, die den Vorschlag eingereicht hat."
 
 #: froide/publicbody/forms.py
-msgid "Please give a reason why this public body should be added if that is not obvious."
+msgid "Please give a reason why this public agency should be added if that is not obvious."
 msgstr "Bitte begründen Sie, warum diese Behörde hinzugefügt werden sollte, falls dies nicht offensichtlich ist."
 
 #: froide/foirequest/forms/request.py
@@ -5697,7 +5697,7 @@ msgid "Please make sure you are using a trusted client that belongs to this appl
 msgstr "Bitte stellen Sie sicher, dass Sie der Anwendung vertrauen, die diese Zugriffsrechte erfordert."
 
 #: froide/foirequest/templates/foirequest/snippets/redaction_explanation.html
-msgid "Please remove all names of public body employees."
+msgid "Please remove all names of public agency employees."
 msgstr "Bitte entfernen Sie alle Namen von Behördenmitarbeiter:innen."
 
 #: froide/foirequest/templates/foirequest/snippets/redaction_explanation.html
@@ -5750,11 +5750,11 @@ msgid "Please set the status of this request!"
 msgstr "Bitte den Status der Anfrage angeben!"
 
 #: froide/foirequest/forms/request.py
-msgid "Please specify a reason why this is the right Public Body:"
+msgid "Please specify a reason why this is the right Public Agency:"
 msgstr "Begründen Sie, warum dies die richtige Behörde ist:"
 
 #: froide/foirequest/forms/request.py
-msgid "Please specify what the Public Body charges for the information."
+msgid "Please specify what the Public Agency charges for the information."
 msgstr "Bitte geben Sie an, welchen Betrag die Behörde für diese Information verlangt."
 
 #: froide/account/templates/account/widgets/confirmation.html
@@ -5991,7 +5991,7 @@ msgid "Propose a change for “%(name)s”"
 msgstr "Schlagen Sie eine Änderung für „%(name)s“ vor"
 
 #: froide/publicbody/templates/publicbody/propose.html
-msgid "Propose a new public body"
+msgid "Propose a new public agency"
 msgstr "Schlagen Sie eine neue Behörde vor"
 
 #: froide/publicbody/templates/publicbody/add_proposal.html
@@ -6001,41 +6001,41 @@ msgstr "Änderung vorschlagen"
 
 #: froide/publicbody/templates/publicbody/propose.html
 #: froide/publicbody/views.py
-msgid "Propose new public body"
+msgid "Propose new public agency"
 msgstr "Behörde vorschlagen"
 
 #: froide/publicbody/models/publicbody.py
-msgid "Proposed Public Bodies"
+msgid "Proposed Public Agencies"
 msgstr "Vorgeschlagene Behörden"
 
 #: froide/publicbody/models/publicbody.py
-msgid "Proposed Public Body"
+msgid "Proposed Public Agency"
 msgstr "Vorgeschlagene Behörde"
 
 #: froide/publicbody/models/changeproposal.py
-msgid "Proposed Public Body Change"
+msgid "Proposed Public Agency Change"
 msgstr "Vorgeschlagene Behördenänderung"
 
 #: froide/publicbody/models/changeproposal.py
-msgid "Proposed Public Body Changes"
+msgid "Proposed Public Agency Changes"
 msgstr "Vorgeschlagene Behördenänderungen"
 
 #: froide/publicbody/models/contact.py
-msgid "Proposed Public Body Contact"
+msgid "Proposed Public Agency Contact"
 msgstr "Vorgeschlagener Behörden-Kontakt"
 
 #: froide/publicbody/models/contact.py
-msgid "Proposed Public Body Contacts"
+msgid "Proposed Public Agency Contacts"
 msgstr "Vorgeschlagene Behörden-Kontakte"
 
 #: froide/publicbody/apps.py froide/publicbody/models/publicbody.py
 #: froide/publicbody/templates/publicbody/base.html
 #: froide/publicbody/templates/publicbody/list.html
-msgid "Public Bodies"
+msgid "Public Agencies"
 msgstr "Behörden"
 
 #: froide/publicbody/admin.py
-msgid "Public Bodies were imported."
+msgid "Public Agencies were imported."
 msgstr "Behörden wurden importiert."
 
 #: froide/foirequest/models/event.py froide/foirequest/models/request.py
@@ -6043,35 +6043,35 @@ msgstr "Behörden wurden importiert."
 #: froide/foirequest/templates/foirequest/body/message/meta_container.html
 #: froide/publicbody/apps.py froide/publicbody/models/publicbody.py
 #: froide/team/templates/team/team_detail.html
-msgid "Public Body"
+msgid "Public Agency"
 msgstr "Behörde"
 
 #: froide/publicbody/admin.py
-msgid "Public Body Admin"
+msgid "Public Agency Admin"
 msgstr "Behörden-Admin"
 
 #: froide/publicbody/models/contact.py
-msgid "Public Body Contact"
+msgid "Public Agency Contact"
 msgstr "Behörden-Kontakt"
 
 #: froide/publicbody/models/contact.py
-msgid "Public Body Contacts"
+msgid "Public Agency Contacts"
 msgstr "Behörden-Kontakte"
 
 #: froide/foirequest/models/message.py
-msgid "Public Body Recipient"
+msgid "Public Agency Recipient"
 msgstr "Empfangende Behörde"
 
 #: froide/foirequest/models/suggestion.py
-msgid "Public Body Suggestion"
+msgid "Public Agency Suggestion"
 msgstr "Vorschlag für Behörde"
 
 #: froide/foirequest/models/suggestion.py
-msgid "Public Body Suggestions"
+msgid "Public Agency Suggestions"
 msgstr "Vorschläge für Behörden"
 
 #: froide/foirequest/models/request.py
-msgid "Public Body needed"
+msgid "Public Agency needed"
 msgstr "Behörde benötigt"
 
 #: froide/publicbody/forms.py
@@ -6079,40 +6079,40 @@ msgid "Public authority with a similar name already exists!"
 msgstr "Eine Behörde mit einem ähnlichen Namen existiert bereits."
 
 #: froide/publicbody/admin.py
-msgid "Public bodies with this category"
+msgid "Public agencies with this category"
 msgstr "Behörden mit dieser Kategorie"
 
 #: froide/publicbody/admin.py
-msgid "Public bodies with this classification"
+msgid "Public agencies with this classification"
 msgstr "Behörden mit dieser Klassifikation"
 
 #: froide/foirequest/templates/foirequest/attachment/manage.html
-msgid "Public bodies’ logos and similar images are automatically classified as unimportant."
+msgid "Public agencies’ logos and similar images are automatically classified as unimportant."
 msgstr "Behördenlogos und ähnliche Bilddateien klassifizieren wir automatisch als unwichtig."
 
 #: froide/foirequest/forms/message.py froide/foirequest/forms/postal.py
 #: froide/foirequest/forms/request.py froide/foirequest/views/make_request.py
-msgid "Public body"
+msgid "Public agency"
 msgstr "Behörde"
 
 #: froide/publicbody/admin.py
 #, python-format
-msgid "Public body confirmed. %(count)d message was sent."
-msgid_plural "Public body confirmed. %(count)d messages were sent"
+msgid "Public agency confirmed. %(count)d message was sent."
+msgid_plural "Public agency confirmed. %(count)d messages were sent"
 msgstr[0] "Behörde wurde bestätigt. %(count)d Nachricht wurde gesendet."
 msgstr[1] "Behörde wurde bestätigt. %(count)d Nachrichten wurden gesendet"
 
 #: froide/publicbody/templates/publicbody/list.html
-msgid "Public body missing? Propose a new public body!"
+msgid "Public agency missing? Propose a new public agency!"
 msgstr "Fehlt eine Behörde? Schlagen Sie eine neue Behörde vor!"
 
 #: froide/publicbody/management/commands/validate_publicbodies.py
-msgid "Public body validation results"
+msgid "Public agency validation results"
 msgstr "Ergebnisse der Behörden-Validierung"
 
 #: froide/publicbody/admin.py
 #, python-format
-msgid "Public body “%s” has been approved"
+msgid "Public agency “%s” has been approved"
 msgstr "Behörde „%s“ wurde freigeschaltet"
 
 #: froide/account/templates/account/settings.html
@@ -6251,11 +6251,11 @@ msgid "Reason for this suggestion: %(reason)s"
 msgstr "Grund für diesen Vorschlag: %(reason)s"
 
 #: froide/foirequest/models/suggestion.py
-msgid "Reason this Public Body fits the request"
+msgid "Reason this Public Agency fits the request"
 msgstr "Begründung, warum diese Behörde zur Anfrage passt"
 
 #: froide/publicbody/templates/publicbody/accept_proposals.html
-msgid "Reasons to reject the proposal could be that the public body already exists in our database or that the proposal is not a public body that can be requested."
+msgid "Reasons to reject the proposal could be that the public agency already exists in our database or that the proposal is not a public agency that can be requested."
 msgstr "Gründe für eine Ablehnung können sein, dass die Behörde schon in unserer Datenbank existiert oder es sich nicht um eine anfragbare Behörde handelt."
 
 #: froide/foirequest/models/event.py
@@ -6268,7 +6268,7 @@ msgid "Received mail does not pass authenticity checks."
 msgstr "Eingegangene E-Mail hat Authentizitätsprüfung nicht bestanden."
 
 #: froide/foirequest/forms/message.py froide/foirequest/views/make_request.py
-msgid "Receiving public body"
+msgid "Receiving public agency"
 msgstr "Empfänger:in (Behörde)"
 
 #: froide/foirequest/models/message.py
@@ -6284,7 +6284,7 @@ msgid "Recipient Name"
 msgstr "Empfänger:innenname"
 
 #: froide/foirequest/forms/message.py
-msgid "Recipient Public Body"
+msgid "Recipient Public Agency"
 msgstr "Empfänger-Behörde"
 
 #: froide/foirequest/templates/foirequest/body/message/meta_container.html
@@ -6441,7 +6441,7 @@ msgid "Removed from search index"
 msgstr "Aus Such-Index entfernt"
 
 #: froide/publicbody/admin.py
-msgid "Replace public bodies with..."
+msgid "Replace public agencies with..."
 msgstr "Ersetze Behörden durch..."
 
 #: froide/foirequest/templates/foirequest/body/message/message.html
@@ -6717,7 +6717,7 @@ msgid "Resolved"
 msgstr "Gelöst"
 
 #: froide/foirequest/serializers.py
-msgid "Response messages must have a sender public body, no sender user and no recipient public body."
+msgid "Response messages must have a sender public agency, no sender user and no recipient public agency."
 msgstr "Antwortnachrichten müssen eine Behörde als Sender, jedoch kein:e Nutzer:in als Sender und keine Behörde als Empfänger enthalten."
 
 #: froide/foirequest/models/request.py
@@ -6880,7 +6880,7 @@ msgstr "Suchen"
 
 #: froide/templates/snippets/homepage_hero.html
 #, python-format
-msgid "Search %(foicount)s requests and %(pbcount)s public bodies:"
+msgid "Search %(foicount)s requests and %(pbcount)s public agencies:"
 msgstr "Suchen Sie in %(foicount)s Anfragen und %(pbcount)s Behörden:"
 
 #: froide/searchalert/apps.py
@@ -6905,7 +6905,7 @@ msgid "Search alerts"
 msgstr "Such-Abos"
 
 #: froide/publicbody/forms.py
-msgid "Search for a topic or a public body:"
+msgid "Search for a topic or a public agency:"
 msgstr "Suchen Sie nach einem Thema oder nach einer Behörde:"
 
 #: froide/foirequest/views/make_request.py
@@ -6921,7 +6921,7 @@ msgid "Search our archives:"
 msgstr "Durchsuchen Sie unser Archiv:"
 
 #: froide/publicbody/filters.py
-msgid "Search public bodies"
+msgid "Search public agencies"
 msgstr "Suchen Sie nach Behörden"
 
 #: froide/searchalert/forms.py
@@ -6982,7 +6982,7 @@ msgid "See FoiMessage"
 msgstr "Siehe IFG-Nachricht"
 
 #: froide/publicbody/templates/publicbody/show.html
-msgid "See all FOI requests for this public body"
+msgid "See all FOI requests for this public agency"
 msgstr "Alle Anfragen an diese Behörde ansehen"
 
 #: froide/account/templates/account/profile.html
@@ -7022,7 +7022,7 @@ msgid "Select none"
 msgstr "Keine auswählen"
 
 #: froide/foirequest/views/make_request.py
-msgid "Select public bodies"
+msgid "Select public agencies"
 msgstr "Behörden auswählen"
 
 #: froide/searchalert/forms.py
@@ -7030,7 +7030,7 @@ msgid "Select the types of search results you would like alerts for."
 msgstr "Wählen Sie die Arten von Suchergebnissen, über die Sie gerne informiert werden würden."
 
 #: froide/foirequest/views/make_request.py
-msgid "Select this public body"
+msgid "Select this public agency"
 msgstr "Auch an diese Behörde schreiben"
 
 #: froide/foirequest/admin.py
@@ -7046,7 +7046,7 @@ msgid "Selected requests are now unpublished."
 msgstr "Markierte Anfragen sind nun depubliziert."
 
 #: froide/foirequest/views/make_request.py
-msgid "Selecting all public bodies, please wait..."
+msgid "Selecting all public agencies, please wait..."
 msgstr "Alle Behörden werden ausgewählt, bitte warten..."
 
 #: froide/foirequest/views/message.py
@@ -7083,7 +7083,7 @@ msgid "Send message"
 msgstr "Nachricht versenden"
 
 #: froide/foirequest/templates/foirequest/body/actions/send_message.html
-msgid "Send message to public body"
+msgid "Send message to public agency"
 msgstr "Nachricht an Behörde senden"
 
 #: froide/foirequest/views/project.py
@@ -7123,11 +7123,11 @@ msgid "Sender name"
 msgstr "Absender:innenname"
 
 #: froide/foirequest/forms/message.py
-msgid "Sender public body"
+msgid "Sender public agency"
 msgstr "Absender:in (Behörde)"
 
 #: froide/foirequest/forms/message.py
-msgid "Sending Public Body"
+msgid "Sending Public Agency"
 msgstr "Absender (Behörde)"
 
 #: froide/account/admin.py
@@ -7143,7 +7143,7 @@ msgid "Set Law"
 msgstr "Gesetz festlegen"
 
 #: froide/foirequest/templates/foirequest/body/message/meta_container.html
-msgid "Set Sending Public Body"
+msgid "Set Sending Public Agency"
 msgstr "Absender:in angeben"
 
 #: froide/account/templates/account/confirmed.html
@@ -7156,7 +7156,7 @@ msgid "Set project"
 msgstr "Projekt festlegen"
 
 #: froide/foirequest/templates/foirequest/body/message/meta_container.html
-msgid "Set receiving public body"
+msgid "Set receiving public agency"
 msgstr "Empfangende Behörde festlegen"
 
 #: froide/foirequest/templates/foirequest/header/info-box.html
@@ -7189,11 +7189,11 @@ msgid "Set team for requests..."
 msgstr "Weisen Sie diesen Anfragen ein Team zu…"
 
 #: froide/foirequest/templates/foirequest/body/message/meta_container.html
-msgid "Set the Public Body that sent this message:"
+msgid "Set the Public Agency that sent this message:"
 msgstr "Geben Sie die Behörde an, die dieses Antwort gesendet hat:"
 
 #: froide/foirequest/templates/foirequest/body/message/meta_container.html
-msgid "Set the public body that received this message:"
+msgid "Set the public agency that received this message:"
 msgstr "Geben Sie die Behörde an, die diese Nachricht erhalten hat:"
 
 #: froide/templates/admin_utils/admin_tag_all.html
@@ -7378,7 +7378,7 @@ msgid "Skip"
 msgstr "Überspringen"
 
 #: froide/foirequest/views/make_request.py
-msgid "Skip this part next time and start at “Choose public body” (optional)"
+msgid "Skip this part next time and start at “Choose public agency” (optional)"
 msgstr "Diesen Teil beim nächsten Mal überspringen und direkt mit „Behörde wählen“ beginnen (optional)"
 
 #: froide/templates/header.html
@@ -7691,11 +7691,11 @@ msgid "The PDF could not be opened because of a missing password. Please ask the
 msgstr "Das PDF konnte nicht geöffnet werden, weil ein Passwort benötigt wird. Bitte fragen Sie die Behörde nach dem Passwort."
 
 #: froide/foirequest/models/request.py
-msgid "The Public Body of this request has been created by the user and still needs to be confirmed."
+msgid "The Public Agency of this request has been created by the user and still needs to be confirmed."
 msgstr "Die Behörde dieser Anfrage wurde durch den:die Nutzer:in erstellt und muss noch bestätigt werden."
 
 #: froide/foirequest/models/request.py
-msgid "The Public Body refuses to provide the information."
+msgid "The Public Agency refuses to provide the information."
 msgstr "Die Behörde weigert sich, die Information zur Verfügung zu stellen."
 
 #: froide/account/templates/oauth2_provider/authorize.html
@@ -7775,7 +7775,7 @@ msgid "The given email address is not correct for this request."
 msgstr "Die angegeben E-Mail-Adresse ist nicht korrekt für diese Anfrage."
 
 #: froide/foirequest/models/request.py
-msgid "The information does not exist at the public body."
+msgid "The information does not exist at the public agency."
 msgstr "Die Information existiert bei der Behörde nicht."
 
 #: froide/foirequest/views/message.py
@@ -7911,7 +7911,7 @@ msgid "There are no external applications with."
 msgstr "Es gibt keine externen Anwendungen mit Zugriff auf Ihr Konto."
 
 #: froide/publicbody/templates/publicbody/show.html
-msgid "There are no requests for this public body yet."
+msgid "There are no requests for this public agency yet."
 msgstr "Es gibt noch keine Anfragen an diese Behörde."
 
 #: froide/foirequest/tasks.py
@@ -7970,7 +7970,7 @@ msgid "This PDF requires a password to open. Please provide the password here:"
 msgstr "Das Öffnen des PDFs benötigt ein Passwort. Bitte geben Sie das Passwort hier ein:"
 
 #: froide/foirequest/views/request_actions.py
-msgid "This Public Body has already been suggested."
+msgid "This Public Agency has already been suggested."
 msgstr "Diese Behörde wurde schon vorgeschlagen."
 
 #: froide/foirequest/templates/foirequest/body/settings.html
@@ -8115,11 +8115,11 @@ msgid "This is not a proper FOI request."
 msgstr "Dies ist keine Informationsfreiheitsanfrage."
 
 #: froide/publicbody/templates/publicbody/accept_proposals.html
-msgid "This is not a public body because..."
+msgid "This is not a public agency because..."
 msgstr "Diese ist keine Behörde, weil..."
 
 #: froide/foirequest/views/request.py
-msgid "This is the deadline for your request. If the public body has not replied by then, we will let you know, so you can send a reminder. You can also adjust the date if necessary."
+msgid "This is the deadline for your request. If the public agency has not replied by then, we will let you know, so you can send a reminder. You can also adjust the date if necessary."
 msgstr "Dies ist die Frist für Ihre Anfrage. Wenn die Behörde bis dahin nicht geantwortet hat, lassen wir Sie das wissen, damit Sie eine Erinnerung verschicken können. Sie können das Datum der Frist auch anpassen, falls erforderlich."
 
 #: froide/foirequest/views/request.py
@@ -8159,27 +8159,27 @@ msgid "This project is public, but some of its requests are <strong>not public</
 msgstr "Dieses Projekt ist öffentlich, aber einige der Anfragen sind <strong>nicht öffentlich</strong>."
 
 #: froide/publicbody/templates/publicbody/accept_proposals.html
-msgid "This proposed public body has not been confirmed yet and is therefore not available for requests. You can adjust the properties and confirm or delete the public body below."
+msgid "This proposed public agency has not been confirmed yet and is therefore not available for requests. You can adjust the properties and confirm or delete the public agency below."
 msgstr "Diese vorgeschlagene Behörde wurde noch nicht bestätigt und steht daher nicht für Anfragen zur Verfügung. Sie können die Angaben ändern und die Behörde bestätigen oder den Vorschlag löschen."
 
 #: froide/publicbody/templates/publicbody/show.html
-msgid "This public body has been proposed and has not been confirmed yet."
+msgid "This public agency has been proposed and has not been confirmed yet."
 msgstr "Diese Behörde wurde vorgeschlagen und ist noch nicht bestätigt."
 
 #: froide/publicbody/admin.py
-msgid "This public body is already confirmed."
+msgid "This public agency is already confirmed."
 msgstr "Diese Behörde ist schon bestätigt."
 
 #: froide/publicbody/templates/admin/publicbody/publicbody/change_form.html
-msgid "This public body's received messages"
+msgid "This public agency's received messages"
 msgstr "Nachrichten an diese Behörde"
 
 #: froide/publicbody/templates/admin/publicbody/publicbody/change_form.html
-msgid "This public body's requests"
+msgid "This public agency's requests"
 msgstr "Anfragen an diese Behörde"
 
 #: froide/publicbody/templates/admin/publicbody/publicbody/change_form.html
-msgid "This public body's sent messages"
+msgid "This public agency's sent messages"
 msgstr "Nachrichten von dieser Behörde"
 
 #: froide/foirequest/models/event.py
@@ -8187,7 +8187,7 @@ msgid "This request became overdue"
 msgstr "Die Frist für diese Anfrage ist abgelaufen"
 
 #: froide/foirequest/forms/request.py
-msgid "This request doesn't need a Public Body!"
+msgid "This request doesn't need a Public Agency!"
 msgstr "Diese Anfrage benötigt keine Behörde!"
 
 #: froide/foirequest/templates/foirequest/body/correspondence.html
@@ -8208,7 +8208,7 @@ msgid "This request is finished."
 msgstr "Diese Anfrage ist abgeschlossen."
 
 #: froide/foirequest/templates/foirequest/header/header.html
-msgid "This request is not an FoI request. This site is only for requesting specific, non-personal information from public bodies."
+msgid "This request is not an FoI request. This site is only for requesting specific, non-personal information from public agencies."
 msgstr "Diese Anfrage ist <strong>keine</strong> Anfrage im Sinne des Informationsfreiheitsgesetzes!<br/>Sie müssen nach spezifischen, nicht Sie selbst betreffenden Dokumenten in Behörden fragen."
 
 #: froide/foirequest/templates/foirequest/header/header.html
@@ -8224,7 +8224,7 @@ msgid "This request is still ongoing."
 msgstr "Diese Anfrage läuft noch."
 
 #: froide/foirequest/models/request.py
-msgid "This request is still waiting for a response from the Public Body."
+msgid "This request is still waiting for a response from the Public Agency."
 msgstr "Diese Anfrage wartet noch auf eine Antwort von der Behörde."
 
 #: froide/campaign/validators.py
@@ -8232,7 +8232,7 @@ msgid "This request seems like it should belong to a campaign. Please use the ca
 msgstr "Es sieht so aus, als sollte diese Anfrage zu einer Aktion gehören. Bitte nutzen Sie die Aktionsseite, um die Anfrage zu stellen."
 
 #: froide/foirequest/models/request.py
-msgid "This request still needs a Public Body."
+msgid "This request still needs a Public Agency."
 msgstr "Diese Anfrage erfordert noch eine Behörde."
 
 #: froide/campaign/templates/campaign/request_banner.html
@@ -8325,7 +8325,7 @@ msgstr "An: %(to)s"
 
 #: froide/foirequest/views/make_request.py
 #, python-brace-format
-msgid "To: {count} public bodies"
+msgid "To: {count} public agencies"
 msgstr "An: {count} Behörden"
 
 #: froide/foirequest/views/make_request.py
@@ -8346,7 +8346,7 @@ msgid "Too many actions."
 msgstr "Zu viele Aktionen."
 
 #: froide/account/templates/account/profile.html
-msgid "Top requested public bodies"
+msgid "Top requested public agencies"
 msgstr "Meist angefragte Behörden"
 
 #: froide/foirequest/views/make_request.py froide/foirequest/views/message.py
@@ -8423,7 +8423,7 @@ msgid "URL of Website"
 msgstr "URL der Webseite"
 
 #: froide/publicbody/forms.py
-msgid "URL of this public body's website."
+msgid "URL of this public agency's website."
 msgstr "URL der Behördenwebseite."
 
 #: froide/publicbody/forms.py
@@ -8824,7 +8824,7 @@ msgid "Users future canceled."
 msgstr "Nutzer:in zur Kündigung vorgemerkt."
 
 #: froide/publicbody/admin.py
-msgid "Validate public bodies"
+msgid "Validate public agencies"
 msgstr "Behörden validieren"
 
 #: froide/account/forms.py
@@ -8972,7 +8972,7 @@ msgstr "Wir führen Sie Schritt für Schritt durch den Prozess."
 
 #: froide/account/templates/account/confirmed.html
 #: froide/foirequest/templates/foirequest/sent.html
-msgid "We will send you an email when you receive a reply from the public body."
+msgid "We will send you an email when you receive a reply from the public agency."
 msgstr "Wir senden Ihnen eine E-Mail, sobald Sie eine Antwort von der Behörde erhalten."
 
 #: froide/publicbody/models/publicbody.py
@@ -9040,7 +9040,7 @@ msgid "What you need to redact"
 msgstr "Was Sie schwärzen sollten"
 
 #: froide/foirequest/filters.py
-msgid "When the same request is sent to many public bodies at once, only the first is shown."
+msgid "When the same request is sent to many public agencies at once, only the first is shown."
 msgstr "Wenn dieselbe Anfrage gleichzeitig an mehrere Behörden gestellt wird, wird nur die erste angezeigt."
 
 #: froide/foirequest/views/message.py
@@ -9048,7 +9048,7 @@ msgid "When was the letter sent?"
 msgstr "Wann wurde der Brief versendet?"
 
 #: froide/foirequest/forms/project.py froide/foirequest/forms/request.py
-msgid "When you are (partially) denied access to information, the Public Body should always state the reason."
+msgid "When you are (partially) denied access to information, the Public Agency should always state the reason."
 msgstr "Wenn Ihnen (auch nur teilweise) Auskunft verweigert wird, sollte die Behörde immer eine Begründung angeben."
 
 #: froide/templates/mfa/auth_FIDO2.html
@@ -9068,7 +9068,7 @@ msgid "When you upload an identity document, please redact all information excep
 msgstr "Wenn Sie ein Identitätsnachweis hochladen, entfernen Sie bitte alle Informationen außer Ihren Namen, die Stadt und das Gültigkeitsdatum. Nachdem Sie ein Bild ausgewählt haben, können Sie es hier schwärzen."
 
 #: froide/publicbody/templates/publicbody/jurisdiction.html
-msgid "Which Public Bodies?"
+msgid "Which Public Agencies?"
 msgstr "Welche Behörden?"
 
 #: froide/foirequest/views/message.py
@@ -9076,15 +9076,15 @@ msgid "Which documents do you want to redact?"
 msgstr "Welche dieser Dokumente möchten Sie schwärzen?"
 
 #: froide/foirequest/templates/foirequest/snippets/request_publicbody_helptext.html
-msgid "Which public body do you want to request information at? Here you can search and filter all available public bodies."
+msgid "Which public agency do you want to request information at? Here you can search and filter all available public agencies."
 msgstr "An welche Behörde wollen Sie Ihre Anfrage schicken? Hier können Sie alle verfügbaren Behörden durchsuchen und filtern."
 
 #: froide/foirequest/views/message.py
-msgid "Which public body has sent this letter?"
+msgid "Which public agency has sent this letter?"
 msgstr "Von welcher Behörde stammt der Brief?"
 
 #: froide/foirequest/views/message.py
-msgid "Which public body have you sent this letter to?"
+msgid "Which public agency have you sent this letter to?"
 msgstr "An welche Behörde haben Sie den Brief gesendet?"
 
 #: froide/publicbody/models/publicbody.py
@@ -9116,7 +9116,7 @@ msgid "Write a public comment"
 msgstr "Schreiben Sie einen öffentlichen Kommentar"
 
 #: froide/foirequest/templates/foirequest/header/header.html
-msgid "Write a reminder to the public body!"
+msgid "Write a reminder to the public agency!"
 msgstr "Schreiben Sie eine Erinnerung an die Behörde!"
 
 #: froide/foirequest/templates/foirequest/body/correspondence.html
@@ -9125,7 +9125,7 @@ msgid "Write message"
 msgstr "Nachricht schreiben"
 
 #: froide/foirequest/views/project.py
-msgid "Write message to public body in selected requests."
+msgid "Write message to public agency in selected requests."
 msgstr "Nachricht an Behörde in ausgewählten Anfragen senden."
 
 #: froide/foirequest/templates/foirequest/foiproject_detail.html
@@ -9261,7 +9261,7 @@ msgid "You can only use the confirmation link once, please login with your passw
 msgstr "Sie können den Bestätigungslink nur einmal benutzen, bitte loggen Sie sich mit Ihrem Passwort ein."
 
 #: froide/foirequest/templates/foirequest/body/actions/send_message.html
-msgid "You can reply to the public body here."
+msgid "You can reply to the public agency here."
 msgstr "Hier können Sie der Behörde antworten."
 
 #: froide/templates/error_base.html
@@ -9350,7 +9350,7 @@ msgid "You have a private account. Your comment will show “requester” as the
 msgstr "Sie haben ein privates Konto. Ihr Kommentar wird als „Anfragesteller:in“ veröffentlicht."
 
 #: froide/foirequest/views/make_request.py
-msgid "You have been allowed to make one project request to these public bodies, but you do not have permission to select your own."
+msgid "You have been allowed to make one project request to these public agencies, but you do not have permission to select your own."
 msgstr "Ihnen wurde es erlaubt eine Projekt-Anfrage an diese Behörden zu stellen, aber Sie haben nicht die Berechtigung diese zu ändern."
 
 #: froide/account/views.py
@@ -9383,7 +9383,7 @@ msgstr "Sie haben keine Zwei-Faktor-Login-Methoden eingerichtet."
 
 #: froide/foirequest/views/message.py
 #, python-brace-format
-msgid "You have noted that the public body had demanded compensation to the amount of ${amount}.<br/>Is this amount still correct?"
+msgid "You have noted that the public agency had demanded compensation to the amount of ${amount}.<br/>Is this amount still correct?"
 msgstr "Sie hatten bereits mitgeteilt, dass die Behörde Kosten in Höhe von ${amount} verlangt hat.<br/>Ist dieser Betrag noch korrekt?"
 
 #: froide/foirequest/templates/foirequest/account/list_projects.html
@@ -9408,7 +9408,7 @@ msgstr[0] "Sie haben bisher eine Anfrage."
 msgstr[1] "Sie haben %(request_count)s Anfragen."
 
 #: froide/publicbody/templates/publicbody/show.html
-msgid "You have proposed this public body, but it has not been confirmed yet."
+msgid "You have proposed this public agency, but it has not been confirmed yet."
 msgstr "Sie haben diese Behörde vorgeschlagen, aber sie wurde noch nicht freigeschaltet."
 
 #: froide/foirequest/views/make_request.py
@@ -9498,7 +9498,7 @@ msgid "You need to provide either the letter text or a scanned document."
 msgstr "Bitte geben Sie entweder den Brieftext an oder laden Sie ein gescanntes Dokument hoch."
 
 #: froide/publicbody/views.py
-msgid "You need to register an account and login in order to propose a new public body."
+msgid "You need to register an account and login in order to propose a new public agency."
 msgstr "Sie benötigen einen Account, um eine neue Behörde vorzuschlagen."
 
 #: froide/account/templates/account/settings.html
@@ -9510,7 +9510,7 @@ msgid "You need to setup a hardware security key or an authenticator app before 
 msgstr "Sie müssen einen Hardware-Sicherheitsschlüssel oder eine Authentifizierungs-App einrichten, bevor Sie einen Wiederherstellungs-Code erstellen können."
 
 #: froide/foirequest/views/request_actions.py
-msgid "You need to specify a Public Body!"
+msgid "You need to specify a Public Agency!"
 msgstr "Sie müssen eine Behörde angeben!"
 
 #: froide/account/views.py
@@ -9523,7 +9523,7 @@ msgid "You provided the wrong password!"
 msgstr "Sie haben ein falsches Passwort angegeben!"
 
 #: froide/problem/models.py
-msgid "You received a bounce mail from the public body."
+msgid "You received a bounce mail from the public agency."
 msgstr "Sie haben eine Bounce-Nachricht von der Behörde erhalten."
 
 #: froide/foirequest/templates/foirequest/header/tour.html
@@ -9623,7 +9623,7 @@ msgid "Your Organizations"
 msgstr "Ihre Organisationen"
 
 #: froide/foirequest/views/request_actions.py
-msgid "Your Public Body suggestion has been added."
+msgid "Your Public Agency suggestion has been added."
 msgstr "Ihr Vorschlag für eine Behörde wurde hinzugefügt."
 
 #: froide/organization/templates/organization/organization_list_own.html
@@ -9676,11 +9676,11 @@ msgid "Your address will never be displayed publicly."
 msgstr "Ihre Adresse wird niemals öffentlich angezeigt werden."
 
 #: froide/account/forms.py
-msgid "Your address will not be displayed publicly and is only needed because a public body will likely want to send you paper."
+msgid "Your address will not be displayed publicly and is only needed because a public agency will likely want to send you paper."
 msgstr "Ihre Adresse wird nicht öffentlich angezeigt und wird nur gebraucht, weil eine Behörde Ihnen wahrscheinlich etwas per Post zusenden will."
 
 #: froide/account/forms.py
-msgid "Your address will not be displayed publicly and is only needed in case a public body needs to send you paper."
+msgid "Your address will not be displayed publicly and is only needed in case a public agency needs to send you paper."
 msgstr "Ihre Adresse wird nicht öffentlich angezeigt und wird nur für den Fall verwendet, dass eine Behörde Ihnen etwas per Post zusenden muss."
 
 #: froide/publicbody/views.py
@@ -9820,7 +9820,7 @@ msgstr "Ihre Projekte"
 
 #: froide/publicbody/forms.py
 #, python-format
-msgid "Your public body proposal “%s” was rejected"
+msgid "Your public agency proposal “%s” was rejected"
 msgstr "Ihr Vorschlag für Behörde „%s“ wurde abgelehnt"
 
 #: froide/account/templates/account/settings.html
@@ -9864,7 +9864,7 @@ msgid "Your request has been sent"
 msgstr "Ihre Anfrage wurde gesendet!"
 
 #: froide/foirequest/templates/foirequest/body/actions/send_message.html
-msgid "Your request is <b>overdue</b>. You should send a reminder to the Public Body!"
+msgid "Your request is <b>overdue</b>. You should send a reminder to the Public Agency!"
 msgstr "Ihre Anfrage ist <b>verspätet</b>. Sie sollten der Behörde eine Nachricht schicken."
 
 #: froide/foirequest/templates/foirequest/sent.html
@@ -9893,7 +9893,7 @@ msgstr "Ihre Anfrage war bereits abgeschlossen. Ist dies nach Erhalt des Briefes
 
 #: froide/account/templates/account/new.html
 #, python-format
-msgid "Your request “%(title)s” will only be sent to the public body, when you confirm your email address."
+msgid "Your request “%(title)s” will only be sent to the public agency, when you confirm your email address."
 msgstr "Ihre Anfrage „%(title)s“ wird erst an die Behörde versendet, wenn Sie Ihre E-Mail-Adresse bestätigen."
 
 #: froide/account/templates/account/confirmed.html
@@ -10052,7 +10052,7 @@ msgid "a postal reply was added"
 msgstr "eine Postantwort wurde hinzugefügt"
 
 #: froide/foirequest/models/event.py
-msgid "a public body was suggested"
+msgid "a public agency was suggested"
 msgstr "eine Behörde wurde vorgeschlagen"
 
 #: froide/publicbody/urls.py
@@ -10874,15 +10874,15 @@ msgid "one or more attachments were converted"
 msgstr "ein oder mehr Anhänge wurden umgewandelt"
 
 #: froide/foirequest/views/make_request.py
-msgid "one public body"
+msgid "one public agency"
 msgstr "eine Behörde"
 
 #: froide/foirequest/views/make_request.py
-msgid "one public body chosen"
+msgid "one public agency chosen"
 msgstr "eine Behörde ausgewählt"
 
 #: froide/foirequest/views/make_request.py froide/foirequest/views/message.py
-msgid "one public body found"
+msgid "one public agency found"
 msgstr "Eine Behörde gefunden"
 
 #: froide/account/templates/account/profile.html
@@ -11036,11 +11036,11 @@ msgstr "geschütztes Original"
 #: froide/document/views.py froide/foirequest/views/account_requests.py
 #: froide/foirequest/views/make_request.py froide/problem/views.py
 #: froide/publicbody/admin.py
-msgid "public bodies"
+msgid "public agencies"
 msgstr "Behörden"
 
 #: froide/foirequest/templates/foirequest/foiproject_detail.html
-msgid "public body"
+msgid "public agency"
 msgstr "Behörde"
 
 #: froide/foirequest/models/project.py froide/foirequest/models/request.py
@@ -11387,7 +11387,7 @@ msgstr "an %(name)s"
 
 #: froide/foirequest/views/make_request.py
 #, python-format
-msgid "to %(name)s and %(count)s other public bodies"
+msgid "to %(name)s and %(count)s other public agencies"
 msgstr "an %(name)s und %(count)s andere Behörden"
 
 #: froide/foirequest/feeds.py
@@ -11397,7 +11397,7 @@ msgstr "an %(publicbody)s"
 
 #: froide/foirequest/templates/foirequest/snippets/request_item_inner.html
 #, python-format
-msgid "to <a href=\"%(url)s\">%(name)s</a> and <a href=\"%(urlp)s\">%(count)s other public bodies</a>"
+msgid "to <a href=\"%(url)s\">%(name)s</a> and <a href=\"%(urlp)s\">%(count)s other public agencies</a>"
 msgstr "an <a href=\"%(url)s\">%(name)s</a> und <a href=\"%(urlp)s\">%(count)s andere Behörden</a>"
 
 #: froide/problem/views.py
@@ -11405,7 +11405,7 @@ msgid "to message"
 msgstr "zur Nachricht"
 
 #: froide/problem/views.py
-msgid "to public body"
+msgid "to public agency"
 msgstr "zur Behörde"
 
 #: froide/foirequest/urls/list_requests_urls.py
@@ -11565,22 +11565,22 @@ msgstr "{count} Bearbeitungsvorschläge wurden angenommen."
 
 #: froide/foirequest/views/make_request.py
 #, python-brace-format
-msgid "{count} public bodies"
+msgid "{count} public agencies"
 msgstr "{count} Behörden"
 
 #: froide/foirequest/views/make_request.py
 #, python-brace-format
-msgid "{count} public bodies chosen"
+msgid "{count} public agencies chosen"
 msgstr "{count} Behörden ausgewählt"
 
 #: froide/foirequest/views/make_request.py froide/foirequest/views/message.py
 #, python-brace-format
-msgid "{count} public bodies found"
+msgid "{count} public agencies found"
 msgstr "{count} Behörden gefunden"
 
 #: froide/publicbody/admin.py
 #, python-brace-format
-msgid "{count} public bodies were confirmed."
+msgid "{count} public agencies were confirmed."
 msgstr "{count} Behörden wurden bestätigt."
 
 #: froide/foirequest/views/make_request.py
@@ -11680,8 +11680,8 @@ msgstr "„%(subject)s“ an %(name)s"
 
 #: froide/foirequest/templates/foirequest/account/list_drafts.html
 #, python-format
-msgid "“%(subject)s” to one public body"
-msgid_plural "“%(subject)s” to %(count)s public bodies"
+msgid "“%(subject)s” to one public agency"
+msgid_plural "“%(subject)s” to %(count)s public agencies"
 msgstr[0] "„%(subject)s“ an eine Behörde"
 msgstr[1] "„%(subject)s” an %(count)s Behörden"
 
@@ -11923,10 +11923,10 @@ msgstr "👋 Viel Erfolg!"
 
 #~ msgid ""
 #~ "\n"
-#~ "%(counter)s Public Body in Topic '%(name)s'"
+#~ "%(counter)s Public Agency in Topic '%(name)s'"
 #~ msgid_plural ""
 #~ "\n"
-#~ "%(counter)s Public Bodies in Topic '%(name)s'"
+#~ "%(counter)s Public Agencies in Topic '%(name)s'"
 #~ msgstr[0] "28129e804577ec6c2115ed2b83e1bf82_pl_0"
 #~ msgstr[1] "28129e804577ec6c2115ed2b83e1bf82_pl_1"
 
@@ -12041,8 +12041,8 @@ msgstr "👋 Viel Erfolg!"
 #~ msgstr "„%(subject)s“ an %(name)s"
 
 #, fuzzy
-#~ msgid "&#8220;%(subject)s&#8221; to one public body"
-#~ msgid_plural "&#8220;%(subject)s&#8221; to %(count)s public bodies"
+#~ msgid "&#8220;%(subject)s&#8221; to one public agency"
+#~ msgid_plural "&#8220;%(subject)s&#8221; to %(count)s public agencies"
 #~ msgstr[0] "„%(subject)s“ an eine Behörde"
 #~ msgstr[1] "„%(subject)s” an %(count)s Behörden"
 
@@ -12136,7 +12136,7 @@ msgstr "👋 Viel Erfolg!"
 #~ msgid "Approve or redact attachments."
 #~ msgstr "Anhänge freigeben oder schwärzen."
 
-#~ msgid "Are we missing a public body? <a href=\"%(url)s\">Please let us know!</a>"
+#~ msgid "Are we missing a public agency? <a href=\"%(url)s\">Please let us know!</a>"
 #~ msgstr "Fehlt eine Behörde? <a href=\"%(url)s\">Lassen Sie es uns wissen!</a>"
 
 #~ msgid "Are you sure that no redaction is needed?"
@@ -12154,11 +12154,11 @@ msgstr "👋 Viel Erfolg!"
 #~ msgstr "As a moderator you are still able to publish it."
 
 #, fuzzy
-#~ msgid "As the author of this request, please choose a public body from one of the suggestions:"
+#~ msgid "As the author of this request, please choose a public agency from one of the suggestions:"
 #~ msgstr "Als Autor dieser Anfrage wählen Sie bitte eine Behörde aus den Vorschlägen aus:"
 
 #, fuzzy
-#~ msgid "Ask Public Bodies for administrative information &#8212; it's your right."
+#~ msgid "Ask Public Agencies for administrative information &#8212; it's your right."
 #~ msgstr "Fragen Sie Behörden nach Verwaltungsinformationen – es ist Ihr gutes Recht."
 
 #, fuzzy
@@ -12213,7 +12213,7 @@ msgstr "👋 Viel Erfolg!"
 #~ "Grüße,\n"
 #~ "%(site_name)s\n"
 
-#~ msgid "Choose Public Body"
+#~ msgid "Choose Public Agency"
 #~ msgstr "Behörde auswählen"
 
 #~ msgid "Choose object to assign"
@@ -12222,7 +12222,7 @@ msgstr "👋 Viel Erfolg!"
 #~ msgid "Choose public authority"
 #~ msgstr "Behörde wählen"
 
-#~ msgid "Choose replacement public body"
+#~ msgid "Choose replacement public agency"
 #~ msgstr "Wählen Sie eine Behörde als Ersatz aus"
 
 #~ msgid "Choose the type of request"
@@ -12238,14 +12238,14 @@ msgstr "👋 Viel Erfolg!"
 #~ msgid "Clear"
 #~ msgstr "Atom"
 
-#~ msgid "Click here to go to 115.de - the Public Body Service Hotline"
+#~ msgid "Click here to go to 115.de - the Public Agency Service Hotline"
 #~ msgstr "Klicken Sie hier um zu 115.de – der Seite der Behörden-Hotline zu gelangen"
 
 #~ msgid "Click here to go to abgeordnetenwatch.de"
 #~ msgstr "Klicken Sie hier um zu abgeordnetenwatch.de zu gelangen"
 
-#~ msgid "Click here to make a request to this Public Body"
-#~ msgstr "Click here to make a request to this Public Body"
+#~ msgid "Click here to make a request to this Public Agency"
+#~ msgstr "Click here to make a request to this Public Agency"
 
 #, fuzzy
 #~ msgid "Comma-separated integers"
@@ -12254,7 +12254,7 @@ msgstr "👋 Viel Erfolg!"
 #~ msgid "Confirm password:"
 #~ msgstr "Bestätigen Sie das Passwort:"
 
-#~ msgid "Confirm this Public Body"
+#~ msgid "Confirm this Public Agency"
 #~ msgstr "Bestätigen Sie diese Behörde"
 
 #, fuzzy
@@ -12280,7 +12280,7 @@ msgstr "👋 Viel Erfolg!"
 #~ msgid "Count"
 #~ msgstr "Count"
 
-#~ msgid "Create a new public body on the fly."
+#~ msgid "Create a new public agency on the fly."
 #~ msgstr "Tragen Sie jetzt eine neue Behörde ein."
 
 #~ msgid "Create a new team."
@@ -12314,7 +12314,7 @@ msgstr "👋 Viel Erfolg!"
 #, python-format
 #~ msgid ""
 #~ "Dear %(user_name)s,\n"
-#~ "  the public body “%(name)s” you proposed already exists. You can find it here:\n"
+#~ "  the public agency “%(name)s” you proposed already exists. You can find it here:\n"
 #~ "\n"
 #~ "\n"
 #~ "\n"
@@ -12404,7 +12404,7 @@ msgstr "👋 Viel Erfolg!"
 #~ msgid "Don't leave the subject of your message empty"
 #~ msgstr "Lassen Sie den Betreff Ihrer Nachricht nicht leer."
 
-#~ msgid "Don't select a public body for now. Let others help to find the right Public Body later."
+#~ msgid "Don't select a public agency for now. Let others help to find the right Public Agency later."
 #~ msgstr "Jetzt keine Behörde wählen. Lassen Sie andere später Behörden vorschlagen."
 
 #~ msgid "Download export of user '{}' is ready."
@@ -12503,7 +12503,7 @@ msgstr "👋 Viel Erfolg!"
 #~ msgid "Exchange"
 #~ msgstr "ändern"
 
-#~ msgid "Explore other requests made to this Public Body"
+#~ msgid "Explore other requests made to this Public Agency"
 #~ msgstr "Lesen Sie andere Anfragen an diese Behörde"
 
 #~ msgid "Facebook"
@@ -12522,7 +12522,7 @@ msgstr "👋 Viel Erfolg!"
 #~ msgid "File path"
 #~ msgstr "Dateityp"
 
-#~ msgid "Filtered by requests to Public Bodies in %(name)s."
+#~ msgid "Filtered by requests to Public Agencies in %(name)s."
 #~ msgstr "Nur Anfragen an Behörden von %(name)s."
 
 #~ msgid "For FoI Officers"
@@ -12535,7 +12535,7 @@ msgstr "👋 Viel Erfolg!"
 #~ msgid ""
 #~ "Freedom of Information Request\n"
 #~ "\n"
-#~ "      To: Ministry of Interior\n"
+#~ "      To: Department of Labor\n"
 #~ "\n"
 #~ "      Dear Sir or Madam,\n"
 #~ "      I request information about the following:\n"
@@ -12588,10 +12588,10 @@ msgstr "👋 Viel Erfolg!"
 #~ msgstr "Post erhalten?"
 
 #, fuzzy
-#~ msgid "Have you not gotten any reply? &amp;rarr; &lt;a data-tabgo=\"tab\" href=\"#write-message\">Write a reminder to the public body!&lt;/a>"
+#~ msgid "Have you not gotten any reply? &amp;rarr; &lt;a data-tabgo=\"tab\" href=\"#write-message\">Write a reminder to the public agency!&lt;/a>"
 #~ msgstr "Haben Sie keine Antwort erhalten? &rarr; <a data-tabgo=\"tab\" href=\"#write-message\">Fragen Sie bei der Behörde nach!</a>"
 
-#~ msgid "Have you not gotten any reply? &rarr; <a data-tabgo=\"tab\" href=\"#write-message\">Write a reminder to the public body!</a>"
+#~ msgid "Have you not gotten any reply? &rarr; <a data-tabgo=\"tab\" href=\"#write-message\">Write a reminder to the public agency!</a>"
 #~ msgstr "Haben Sie keine Antwort erhalten? &rarr; <a data-tabgo=\"tab\" href=\"#write-message\">Fragen Sie bei der Behörde nach!</a>"
 
 #, fuzzy
@@ -12610,7 +12610,7 @@ msgstr "👋 Viel Erfolg!"
 #~ msgid "Hinweis zu dieser Behörde"
 #~ msgstr "Hinweis zu dieser Behörde"
 
-#~ msgid "Homepage URL of Public Body"
+#~ msgid "Homepage URL of Public Agency"
 #~ msgstr "Homepage-URL der Behörde"
 
 #~ msgid "How is this calculated?"
@@ -12634,7 +12634,7 @@ msgstr "👋 Viel Erfolg!"
 #~ msgstr "Ideas for requests:"
 
 #, fuzzy
-#~ msgid "If this document &lt;strong>is not a letter to you&lt;/strong> from a public body, but any other kind of document, it very likely &lt;strong>does not need a redaction&lt;/strong>."
+#~ msgid "If this document &lt;strong>is not a letter to you&lt;/strong> from a public agency, but any other kind of document, it very likely &lt;strong>does not need a redaction&lt;/strong>."
 #~ msgstr "Falls dieses Dokument <strong>kein Brief an Sie</strong> von einer Behörde ist, sondern ein andere Art von Dokument, dann müssen Sie es sehr wahrscheinlich <strong>nicht schwärzen</strong>."
 
 #~ msgid "If you don't want your request to be public right now, uncheck this. You can always decide to make it public later."
@@ -12656,16 +12656,16 @@ msgstr "👋 Viel Erfolg!"
 #~ "Wenn Sie der Anfrage NICHT mehr folgen wollen, klicken Sie diesen Link:\n"
 #~ "%(unfollow_link)s"
 
-#~ msgid "If you want to ask a question that relates to you personally, like how you can achieve something or who you have to contact, you need publicly available information from that public body:"
+#~ msgid "If you want to ask a question that relates to you personally, like how you can achieve something or who you have to contact, you need publicly available information from that public agency:"
 #~ msgstr "Wenn Sie eine Frage stellen wollen, die sich auf Sie selbst bezieht, wie etwa „Wo bekomme <b>ich</b> diesen Service?“ oder „Was muss <b>ich</b> in diesem Fall tun?“, dann brauchen Sie Informationen zu den Dienstleistungen dieser Behörde:"
 
 #~ msgid "If you want to send one of your proofs of identity, choose it here."
 #~ msgstr "Wenn Sie einen Ihrer Nachweise mitsenden möchten, wählen Sie ihn hier aus."
 
-#~ msgid "If your message is redirected to a different Public Body, please specify the new Public Body"
+#~ msgid "If your message is redirected to a different Public Agency, please specify the new Public Agency"
 #~ msgstr "Wenn Ihre Anfrage zu einer anderen Behörde weitergeleitet wurde, geben Sie bitte die neue Behörde an"
 
-#~ msgid "In order to ask about a political state, you need to talk to people not public bodies. Please ask your Member of Parliament about the topic you are interested in:"
+#~ msgid "In order to ask about a political state, you need to talk to people not public agencies. Please ask your Member of Parliament about the topic you are interested in:"
 #~ msgstr "Wenn Sie sich über Gründe für politische Entscheidungen informieren möchten, sollten Sie mit Ihrem Bundestagsabgeordneten, Landtagsabgeordneten, Ratsmitglied oder einen Mandatsträger in anderer Funktion (z.B. Mitglied einer Bezirksvertretung) reden. Sie können Ihrem Bundes- oder Landtagsabgeordneten (in einzelnen Kommunen auch ihrem Ratsmitglied) auf abgeordnetenwatch.de Fragen stellen:"
 
 #~ msgid "Information Law"
@@ -12747,7 +12747,7 @@ msgstr "👋 Viel Erfolg!"
 #~ msgid "Make a request based on this article:"
 #~ msgstr "Make a request based on this article:"
 
-#~ msgid "Make a request to one of <a href=\"%(url)s\">%(pb_count)s Public Bodies.</a>"
+#~ msgid "Make a request to one of <a href=\"%(url)s\">%(pb_count)s Public Agencies.</a>"
 #~ msgstr "Stellen Sie eine Anfrage an eine von <a href=\"%(url)s\">%(pb_count)s Behörden.</a>"
 
 #~ msgid "Make this request public now"
@@ -12828,28 +12828,28 @@ msgstr "👋 Viel Erfolg!"
 #~ msgid "Moderators"
 #~ msgstr "Moderator:innen"
 
-#~ msgid "Name of Public Body"
+#~ msgid "Name of Public Agency"
 #~ msgstr "Name der Behörde"
 
-#~ msgid "Names of public body employees"
+#~ msgid "Names of public agency employees"
 #~ msgstr "Namen von Behördenmitarbeiter:innen"
 
 #~ msgid "New email address"
 #~ msgstr "Neue E-Mail-Adresse"
 
-#~ msgid "New public body proposal"
+#~ msgid "New public agency proposal"
 #~ msgstr "Neuer Behördenvorschlag"
 
 #~ msgid "Newsletter"
 #~ msgstr "Newsletter"
 
-#~ msgid "No Public Bodies yet"
-#~ msgstr "No Public Bodies yet"
+#~ msgid "No Public Agencies yet"
+#~ msgstr "No Public Agencies yet"
 
 #~ msgid "No file present!"
 #~ msgstr "Keine Datei gefunden!"
 
-#~ msgid "No relevant Public bodies found for \"%(query)s\"."
+#~ msgid "No relevant Public agencies found for \"%(query)s\"."
 #~ msgstr "Es wurden keine relevanten Behörden für „%(query)s“ gefunden."
 
 #~ msgid "No relevant requests found for \"%(query)s\"."
@@ -12927,7 +12927,7 @@ msgstr "👋 Viel Erfolg!"
 #~ msgid "Other Options"
 #~ msgstr "Andere Optionen"
 
-#~ msgid "Others can now suggest the Public Bodies for your request."
+#~ msgid "Others can now suggest the Public Agencies for your request."
 #~ msgstr "Andere können nun Behörden für diese Anfrage vorschlagen."
 
 #, python-format
@@ -12952,7 +12952,7 @@ msgstr "👋 Viel Erfolg!"
 #~ msgstr "Bitte überprüfen Sie diesen Anhang auf personenbezogenen Informationen. Dann können Sie ihn entweder veröffentlichen (falls Ihnen dies nicht ausdrücklich verboten wurde) oder Sie können Stellen schwärzen."
 
 #, fuzzy
-#~ msgid "Please choose a public body first and click on the &#171;Make a request&#187; button."
+#~ msgid "Please choose a public agency first and click on the &#171;Make a request&#187; button."
 #~ msgstr "Bitte wählen Sie zuerst eine Behörde aus und klicken Sie dann auf den „Anfrage stellen“-Knopf."
 
 #, fuzzy
@@ -12992,7 +12992,7 @@ msgstr "👋 Viel Erfolg!"
 #~ msgstr "Bitte bleiben Sie höflich."
 
 #, fuzzy
-#~ msgid "Please type &lt;strong>the name of the public body&lt;/strong> you'd like to request information from into the search box."
+#~ msgid "Please type &lt;strong>the name of the public agency&lt;/strong> you'd like to request information from into the search box."
 #~ msgstr "Bitte geben Sie <strong>den Namen der Behörde</strong> ein, die Sie anfragen wollen."
 
 #, fuzzy
@@ -13029,16 +13029,16 @@ msgstr "👋 Viel Erfolg!"
 #~ msgid "Provide an idea for a request based on this article"
 #~ msgstr "Provide an idea for a request based on this article"
 
-#~ msgid "Provide the redirected public body!"
+#~ msgid "Provide the redirected public agency!"
 #~ msgstr "Bitte geben Sie die neue Behörde an!"
 
 #~ msgid "Public"
 #~ msgstr "Öffentlich"
 
-#~ msgid "Public Bodies by Topic"
-#~ msgstr "Public Bodies by Topic"
+#~ msgid "Public Agencies by Topic"
+#~ msgstr "Public Agencies by Topic"
 
-#~ msgid "Public body change proposal"
+#~ msgid "Public agency change proposal"
 #~ msgstr "Behördenänderungsvorschlag"
 
 #~ msgid "Publish this attachment"
@@ -13089,10 +13089,10 @@ msgstr "👋 Viel Erfolg!"
 #~ msgid "Related Freedom of Information Requests"
 #~ msgstr "Passende Informationsfreiheitsanfragen"
 
-#~ msgid "Related Public Bodies"
+#~ msgid "Related Public Agencies"
 #~ msgstr "Passende Behörden"
 
-#~ msgid "Reply to public body"
+#~ msgid "Reply to public agency"
 #~ msgstr "Schreiben Sie an die Behörde"
 
 #~ msgid "Reprocess document"
@@ -13152,11 +13152,11 @@ msgstr "👋 Viel Erfolg!"
 #~ msgid "Scan documents"
 #~ msgstr "Dokumente scannen"
 
-#~ msgid "Search Public Body Website"
+#~ msgid "Search Public Agency Website"
 #~ msgstr "Durchsuchen Sie die Webseite der Behörde"
 
-#~ msgid "Search Results for &quot;%(query)s&quot; in Public Bodies"
-#~ msgstr "Search Results for &quot;%(query)s&quot; in Public Bodies"
+#~ msgid "Search Results for &quot;%(query)s&quot; in Public Agencies"
+#~ msgstr "Search Results for &quot;%(query)s&quot; in Public Agencies"
 
 #~ msgid "Search Terms"
 #~ msgstr "Suchbegriffe"
@@ -13190,7 +13190,7 @@ msgstr "👋 Viel Erfolg!"
 #~ msgid "Send message to creator"
 #~ msgstr "Nachricht an Ersteller:in senden"
 
-#~ msgid "Send this request to the selected Public Body"
+#~ msgid "Send this request to the selected Public Agency"
 #~ msgstr "Senden Sie diese Anfrage an die gewählte Behörde"
 
 #~ msgid "Sending messages"
@@ -13234,7 +13234,7 @@ msgstr "👋 Viel Erfolg!"
 #~ msgid "Show all Non-FoI requests"
 #~ msgstr "Zeige andere Anfragen"
 
-#~ msgid "Show all public bodies"
+#~ msgid "Show all public agencies"
 #~ msgstr "Zeige alle Behörden"
 
 #~ msgid "Show all the requests that you are following."
@@ -13286,7 +13286,7 @@ msgstr "👋 Viel Erfolg!"
 #~ msgid "Successfully triggered redelivery."
 #~ msgstr "Erneute Zustellung erfolgreich ausgelöst."
 
-#~ msgid "Suggest this Public Body"
+#~ msgid "Suggest this Public Agency"
 #~ msgstr "Schlagen Sie diese Behörde vor"
 
 #~ msgid "Summary of Request"
@@ -13305,10 +13305,10 @@ msgstr "👋 Viel Erfolg!"
 #~ msgid "Tag all with..."
 #~ msgstr "Alle taggen mit..."
 
-#~ msgid "Tagged Public Bodies"
+#~ msgid "Tagged Public Agencies"
 #~ msgstr "Verschlagwortete Behörden"
 
-#~ msgid "Tagged Public Body"
+#~ msgid "Tagged Public Agency"
 #~ msgstr "Verschlagwortete Behörde"
 
 #, fuzzy
@@ -13321,7 +13321,7 @@ msgstr "👋 Viel Erfolg!"
 #~ msgid "Terms and Conditions and Privacy Statement"
 #~ msgstr "Nutzungs- und Datenschutz&shy;bedingungen"
 
-#~ msgid "The Public Body stated that it does not possess the information."
+#~ msgid "The Public Agency stated that it does not possess the information."
 #~ msgstr "Die Behörde gibt an, nicht im Besitz der Information zu sein."
 
 #, fuzzy
@@ -13332,13 +13332,13 @@ msgstr "👋 Viel Erfolg!"
 #~ msgid "The access token is valid but does not have enough scope."
 #~ msgstr "Zugangs-Tokens"
 
-#~ msgid "The following public bodies have already been suggested:"
+#~ msgid "The following public agencies have already been suggested:"
 #~ msgstr "Die folgenden Behörden wurden bisher vorgeschlagen:"
 
 #~ msgid "The form has errors"
 #~ msgstr "Das Formular enthält noch Fehler."
 
-#~ msgid "The public body of this request has been created by the user and still needs to be confirmed."
+#~ msgid "The public agency of this request has been created by the user and still needs to be confirmed."
 #~ msgstr "Die Behörde dieser Anfrage wurde vom Nutzer erstellt und muss noch bestätigt werden."
 
 #~ msgid "The request '%(request)s' received a postal reply."
@@ -13404,7 +13404,7 @@ msgstr "👋 Viel Erfolg!"
 #~ msgstr "Diese Anfrage ist identisch zu:"
 
 #, fuzzy
-#~ msgid "This request is not public and will not receive suggestions for public bodies from users!"
+#~ msgid "This request is not public and will not receive suggestions for public agencies from users!"
 #~ msgstr "Diese Anfrage ist nicht öffentlich und wird keine Vorschläge für Behörden durch Nutzer erhalten!"
 
 #, fuzzy
@@ -13419,7 +13419,7 @@ msgstr "👋 Viel Erfolg!"
 #~ msgstr "Auf diese Anfrage treffen mehrere Informationsgesetze zu. Falls aus der Antwort klar hervorgeht, auf welches Gesetz sie sich bezieht, wählen Sie dieses Gesetz unten aus. Falls es nicht offensichtlich ist, belassen Sie es dabei."
 
 #, fuzzy
-#~ msgid "This request was not sent yet, because it still needs a Public Body as a recipient."
+#~ msgid "This request was not sent yet, because it still needs a Public Agency as a recipient."
 #~ msgstr "Diese Anfrage wurde noch nicht gesendet, weil sie noch eine Behörde als Empfänger benötigt."
 
 #, fuzzy
@@ -13429,7 +13429,7 @@ msgstr "👋 Viel Erfolg!"
 #~ msgid "This site is <strong>public</strong>. Everything you type and any response will be published."
 #~ msgstr "Diese Seite ist <strong>öffentlich</strong>. Alles, was Sie eingeben und die Antworten werden veröffentlicht."
 
-#~ msgid "This site is currently in dry run mode. All Public Body mail will go to this mail server:"
+#~ msgid "This site is currently in dry run mode. All Public Agency mail will go to this mail server:"
 #~ msgstr "Diese Seite läuft momentan im Probebetrieb. Alle E-Mails an Behörden gehen momentan an folgenden Mail-Server: "
 
 #, fuzzy
@@ -13518,13 +13518,13 @@ msgstr "👋 Viel Erfolg!"
 #~ msgid "View on Site"
 #~ msgstr "Auf der Seite ansehen"
 
-#~ msgid "Visit the website of this Public Body"
+#~ msgid "Visit the website of this Public Agency"
 #~ msgstr "Besuchen Sie die Webseite dieser Behörde"
 
 #~ msgid "Wants Newsletter"
 #~ msgstr "Möchte Newsletter"
 
-#~ msgid "We found an email address in your text: {{ email }}. Do not sent personal data to the Public Body."
+#~ msgid "We found an email address in your text: {{ email }}. Do not sent personal data to the Public Agency."
 #~ msgstr "Wir haben {{ email }} in Ihrem Text gefunden. Senden Sie keine persönlichen Daten an die Behörde!"
 
 #~ msgid "We found {{ find }} in your text, but there is already a closing at the bottom of the letter!"
@@ -13601,7 +13601,7 @@ msgstr "👋 Viel Erfolg!"
 #~ msgid "You can attach more documents to your letter later."
 #~ msgstr "Sie können später weitere Dokumente zu Ihrem Brief hinzufügen."
 
-#~ msgid "You can browse the list of Public Bodies."
+#~ msgid "You can browse the list of Public Agencies."
 #~ msgstr "Schauen Sie sich die Liste der Behörden an."
 
 #~ msgid "You can browse the list of existing requests."
@@ -13614,10 +13614,10 @@ msgstr "👋 Viel Erfolg!"
 #~ msgid "You can reply to messages or send reminders about your request at the bottom of the page. If your request is refused or overdue you will be able to ask for mediation."
 #~ msgstr "Sie können am Ende der Seite Nachrichten beantworten oder Erinnerungen verschicken. Wenn Ihre Anfrage abgelehnt wurde oder verspätet ist, können Sie hier auch um Vermittlung bitten."
 
-#~ msgid "You can send another message to this Public Body if you want to."
+#~ msgid "You can send another message to this Public Agency if you want to."
 #~ msgstr "Wenn Sie wollen, können Sie eine weitere Nachricht an diese Behörde senden."
 
-#~ msgid "You can suggest a public body for this request."
+#~ msgid "You can suggest a public agency for this request."
 #~ msgstr "Sie können eine Behörde für diese Anfrage vorschlagen."
 
 #~ msgid "You can write a reply by clicking here"
@@ -13650,7 +13650,7 @@ msgstr "👋 Viel Erfolg!"
 #~ msgid "You have not yet confirmed that you want to follow this request. Click the link in the mail that was sent to you."
 #~ msgstr "Sie haben noch nicht bestätigt, dass Sie Benachrichtigungen für diese Anfrage wünschen. Klicken Sie den Link in der E-Mail an, den wir Ihnen gesendet haben."
 
-#~ msgid "You must specify a public body"
+#~ msgid "You must specify a public agency"
 #~ msgstr "Sie müssen eine Behörde angeben"
 
 #~ msgid "You need more redaction."
@@ -13758,11 +13758,11 @@ msgstr "👋 Viel Erfolg!"
 #~ msgstr "Ihre Informationsfreiheitsanfrage war erfolgreich! Bitte helfen Sie uns nun das Ergebnis zu klassifizieren."
 
 #, fuzzy
-#~ msgid "Your request is &lt;b>overdue&lt;/b>. You should send a reminder to the Public Body!"
+#~ msgid "Your request is &lt;b>overdue&lt;/b>. You should send a reminder to the Public Agency!"
 #~ msgstr "Ihre Anfrage ist <b>verspätet</b>. Sie sollten der Behörde eine Nachricht schicken."
 
 #, fuzzy
-#~ msgid "Your request will be sent as soon as the newly created Public Body was confirmed by an administrator."
+#~ msgid "Your request will be sent as soon as the newly created Public Agency was confirmed by an administrator."
 #~ msgstr "Ihre Anfrage wird gesendet, sobald die neu erstellte Behörde von einem Administrator bestätigt wurde."
 
 #~ msgid "Your teams"
@@ -14040,7 +14040,7 @@ msgstr "👋 Viel Erfolg!"
 #~ msgstr "an"
 
 #, fuzzy
-#~ msgid "to &lt;a href=\"%(url)s\">%(name)s&lt;/a> and &lt;a href=\"%(urlp)s\">%(count)s other public bodies&lt;/a>"
+#~ msgid "to &lt;a href=\"%(url)s\">%(name)s&lt;/a> and &lt;a href=\"%(urlp)s\">%(count)s other public agencies&lt;/a>"
 #~ msgstr "an <a href=\"%(url)s\">%(name)s</a> und <a href=\"%(urlp)s\">%(count)s andere Behörden</a>"
 
 #~ msgctxt "URL part"

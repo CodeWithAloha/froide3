@@ -70,7 +70,7 @@ class MessageKind(models.TextChoices):
     POST = ("post", _("postal mail"))
     FAX = ("fax", _("fax"))
     FORM = ("form", _("form"))
-    # uploads by public bodies using link in foirequest
+    # uploads by public agencies using link in foirequest
     UPLOAD = ("upload", _("upload"))
     PHONE = ("phone", _("phone call"))
     VISIT = ("visit", _("visit in person"))
@@ -129,7 +129,7 @@ class FoiMessage(models.Model):
         blank=True,
         null=True,
         on_delete=models.SET_NULL,
-        verbose_name=_("From Public Body"),
+        verbose_name=_("From Public Agency"),
         related_name="send_messages",
     )
 
@@ -142,7 +142,7 @@ class FoiMessage(models.Model):
         blank=True,
         null=True,
         on_delete=models.SET_NULL,
-        verbose_name=_("Public Body Recipient"),
+        verbose_name=_("Public Agency Recipient"),
         related_name="received_messages",
     )
     status = models.CharField(
@@ -556,7 +556,7 @@ class FoiMessage(models.Model):
         from django.core.exceptions import ValidationError
 
         if self.sender_user and self.sender_public_body:
-            raise ValidationError("Message may not be from user and public body")
+            raise ValidationError("Message may not be from user and public agency")
 
     @classmethod
     def get_throttle_config(cls):

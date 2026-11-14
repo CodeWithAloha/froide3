@@ -228,8 +228,9 @@ def cancel_user(user: User, delete: bool = False) -> None:
     user.tags.clear()
     user.save()
     user.groups.clear()
-    user.first_name = ""
-    user.last_name = ""
+    # Don't clear first and last names so that we can redact after account is deleted
+    # user.first_name = ""
+    # user.last_name = ""
     user.is_trusted = False
     user.is_staff = False
     user.is_superuser = False
@@ -274,7 +275,7 @@ def delete_undeleted_left_users():
     for user in canceled_but_undeleted:
         start_cancel_account_process(user)
 
-
+# shouldn't be used since we don't store addresses for users
 def parse_address(address):
     match = POSTCODE_RE.search(address)
     if match is None:

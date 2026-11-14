@@ -72,7 +72,7 @@ async def test_make_not_logged_in_request(
     privacy = page.get_by_role("group", name="Privacy")
     await expect(privacy.locator("[name=private]")).to_have_count(2)
     await expect(privacy).to_have_accessible_description(
-        re.compile("Your name will be sent to public bodies")
+        re.compile("Your name will be sent to public agencies")
     )
     await page.locator("#step_create_account .btn-primary").click()
 
@@ -429,9 +429,9 @@ async def test_skip_search_similar(
 
     await go_to_make_request_url(page, live_server)
 
-    await page.get_by_role("heading", name="Choose public body").click()
+    await page.get_by_role("heading", name="Choose public agency").click()
 
-    await expect(page.get_by_role("heading", name="Choose public body")).to_be_visible()
+    await expect(page.get_by_role("heading", name="Choose public agency")).to_be_visible()
 
     await page.get_by_role("link", name="Similar requests").click()
     await expect(

@@ -33,8 +33,8 @@ class CategorizedPublicBody(TaggedItemBase):
     content_object = models.ForeignKey("PublicBody", on_delete=models.CASCADE)
 
     class Meta:
-        verbose_name = _("Categorized Public Body")
-        verbose_name_plural = _("Categorized Public Bodies")
+        verbose_name = _("Categorized Public Agency")
+        verbose_name_plural = _("Categorized Public Agencies")
 
 
 class PublicBodyManager(CurrentSiteManager):
@@ -163,9 +163,9 @@ class PublicBody(models.Model):
 
     class Meta:
         ordering = ("name",)
-        verbose_name = _("Public Body")
-        verbose_name_plural = _("Public Bodies")
-        permissions = (("moderate", _("Can moderate public bodies")),)
+        verbose_name = _("Public Agency")
+        verbose_name_plural = _("Public Agencies")
+        permissions = (("moderate", _("Can moderate public agencies")),)
 
     serializable_fields = (
         "id",
@@ -381,5 +381,5 @@ class ProposedPublicBody(PublicBody):
     class Meta:
         proxy = True
         ordering = ("-created_at",)
-        verbose_name = _("Proposed Public Body")
-        verbose_name_plural = _("Proposed Public Bodies")
+        verbose_name = _("Proposed Public Agency")
+        verbose_name_plural = _("Proposed Public Agencies")

@@ -22,7 +22,7 @@ export default {
       type: Object,
       required: true
     },
-    // Truncate once there are more than `threshold` public bodies...
+    // Truncate once there are more than `threshold` public agencies...
     threshold: {
       type: Number,
       default: 5

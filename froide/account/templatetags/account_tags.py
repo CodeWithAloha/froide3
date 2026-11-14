@@ -6,7 +6,7 @@ from django.template.loader import render_to_string
 from mfa.models import MFAKey
 
 from ..auth import requires_recent_auth
-from ..forms import AddressForm, NewUserForm
+from ..forms import NewUserForm
 from ..menu import menu_registry
 from ..models import User
 
@@ -17,9 +17,7 @@ register = template.Library()
 def get_user_form(context, address_required=False):
     request = context["request"]
     if request.user.is_authenticated:
-        return AddressForm(
-            initial={"address": request.user.address}, address_required=address_required
-        )
+        return NewUserForm(address_required=address_required, request=request)
     else:
         return NewUserForm(address_required=address_required, request=request)
 

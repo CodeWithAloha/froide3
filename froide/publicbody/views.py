@@ -65,7 +65,7 @@ class PublicBodySearch(BaseSearchView):
     }
 
 
-@cache_anonymous_page(15 * 60)
+@cache_anonymous_page(3 * 60)
 def show_jurisdiction(request, slug):
     jurisdiction = get_object_or_404(Jurisdiction, slug=slug, hidden=False)
     context = {
@@ -203,7 +203,7 @@ class PublicBodyProposalView(LoginRequiredMixin, CreateView):
             context["contact_formset"] = get_publicbody_contact_formset(
                 publicbody=None, user=self.request.user, can_delete=False
             )
-        context["breacrumb_item"] = _("Propose new public body")
+        context["breacrumb_item"] = _("Propose new public agency")
         return context
 
     def post(self, request, *args, **kwargs):
@@ -249,7 +249,7 @@ class PublicBodyProposalView(LoginRequiredMixin, CreateView):
             self.request,
             messages.WARNING,
             _(
-                "You need to register an account and login in order to propose a new public body."
+                "You need to register an account and login in order to propose a new public agency."
             ),
         )
         return super().handle_no_permission()

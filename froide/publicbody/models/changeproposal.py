@@ -29,8 +29,8 @@ class CategorizedPublicBodyChangeProposal(TaggedItemBase):
     )
 
     class Meta:
-        verbose_name = _("Categorized Public Body Change Proposal")
-        verbose_name_plural = _("Categorized Public Body Change Proposals")
+        verbose_name = _("Categorized Public Agency Change Proposal")
+        verbose_name_plural = _("Categorized Public Agency Change Proposals")
 
 
 class PublicBodyChangeProposal(models.Model):
@@ -77,8 +77,8 @@ class PublicBodyChangeProposal(models.Model):
 
     class Meta:
         ordering = ("-created_at",)
-        verbose_name = _("Proposed Public Body Change")
-        verbose_name_plural = _("Proposed Public Body Changes")
+        verbose_name = _("Proposed Public Agency Change")
+        verbose_name_plural = _("Proposed Public Agency Changes")
         constraints = [
             models.UniqueConstraint(
                 fields=["publicbody", "user"], name="unique_publicbody_user_change"
